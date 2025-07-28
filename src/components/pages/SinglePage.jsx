@@ -29,50 +29,7 @@ const SinglePage = () => {
     "Cloud Deployment"
   ];
 
-  const plans = [
-    {
-      name: "Starter",
-      price: "$999",
-      period: "/month",
-      features: [
-        "Up to 3 AI Tools",
-        "Basic Support",
-        "Standard Security",
-        "Monthly Updates"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional", 
-      price: "$2,999",
-      period: "/month",
-      features: [
-        "Up to 8 AI Tools",
-        "Priority Support",
-        "Advanced Security",
-        "Weekly Updates",
-        "Custom Training",
-        "API Access"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: "Custom",
-      period: "",
-      features: [
-        "Unlimited AI Tools",
-        "Dedicated Support",
-        "Enterprise Security", 
-        "Daily Updates",
-        "Custom Development",
-        "Full Integration",
-        "SLA Guarantee"
-      ],
-      popular: false
-    }
-  ];
-
+  
   const whyChooseUs = [
     {
       icon: Star,
@@ -216,50 +173,7 @@ const SinglePage = () => {
       </section>
 
       {/* Pricing Plans */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Choose Your Plan</h2>
-            <p className="text-xl text-gray-600">Flexible pricing options for every business size</p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {plans.map((plan, index) => (
-              <Card key={index} className={`text-center relative ${plan.popular ? 'ring-2 ring-blue-600' : ''}`}>
-                {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-medium">
-                      Most Popular
-                    </span>
-                  </div>
-                )}
-                
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
-                <div className="mb-6">
-                  <span className="text-4xl font-bold text-blue-600">{plan.price}</span>
-                  <span className="text-gray-600">{plan.period}</span>
-                </div>
-                
-                <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-sm text-gray-600">
-                      <CheckCircle className="text-green-500 mr-2 flex-shrink-0" size={16} />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                
-                <Button 
-                  variant={plan.popular ? 'primary' : 'outline'} 
-                  className="w-full"
-                >
-                  Get Started
-                </Button>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
+    
 
       {/* Why Choose Us */}
       <section className="py-16 bg-gray-50">

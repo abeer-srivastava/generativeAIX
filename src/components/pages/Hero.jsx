@@ -25,7 +25,7 @@ const Hero = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-              <Button variant="primary" size="lg">
+              <Button variant="primary" size="lg" action="#">
                 Get Started
                 <ArrowRight className="ml-2" size={20} />
               </Button>
@@ -44,28 +44,28 @@ const Hero = () => {
                     <span className="font-bold">RS</span>
                   </div>
                   <div>
-                    <p className="font-semibold">Ranjeet Singh</p>
+                    <p className="font-semibold">Pawan Sharma</p>
                     <p className="text-blue-200">Lead AI Developer</p>
                   </div>
                 </div>
-                <div className="flex items-center space-x-3">
+                {/* <div className="flex items-center space-x-3">
                   <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
-                    <span className="font-bold">RV</span>
+                    <span className="font-bold"></span>
                   </div>
                   <div>
-                    <p className="font-semibold">Rohan Verma</p>
-                    <p className="text-blue-200">ML Engineer</p>
+                    <p className="font-semibold"></p>
+                    <p className="text-blue-200"></p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
-                    <span className="font-bold">AS</span>
+                    <span className="font-bold"></span>
                   </div>
                   <div>
-                    <p className="font-semibold">Anjali Singh</p>
-                    <p className="text-blue-200">AI Specialist</p>
+                    <p className="font-semibold"></p>
+                    <p className="text-blue-200"></p>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
