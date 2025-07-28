@@ -9,7 +9,7 @@ const Home = () => {
       <ServicesGrid showAll={false} />
 
       {/* Stats Section */}
-      <section className="py-16 bg-blue-600 text-white">
+      <section className="py-16 bg-[#76ABAE] text-[#EEEEEE]">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div>
@@ -33,7 +33,7 @@ const Home = () => {
       </section>
 
       {/* About Us Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-[#EEEEEE]">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
@@ -44,17 +44,17 @@ const Home = () => {
               />
             </div>
             <div>
-              <h2 className="text-3xl font-bold mb-4 text-gray-800">
+              <h2 className="text-3xl font-bold mb-4 text-[#222831]">
                 Learn About Us
               </h2>
-              <p className="text-gray-600 mb-4">
+              <p className="text-[#31363F] mb-4">
                 We are a leading technology company specializing in artificial
                 intelligence and the power of generative AI. From automated
                 chatbots to machine learning, document digitization, and
                 intelligent data scraping — our solutions are designed to
                 transform your business operations.
               </p>
-              <p className="text-gray-600 mb-6">
+              <p className="text-[#31363F] mb-6">
                 We also offer real-time text translation, encrypt-based
                 text-to-image generation, AI-powered frontend development, and
                 easy-to-follow learning tutorials. Our mission is to make AI
@@ -62,7 +62,7 @@ const Home = () => {
                 an accessible pricing for smart automation and business
                 scalability.
               </p>
-              <button className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition duration-300">
+              <button className="bg-[#76ABAE] text-[#EEEEEE] px-6 py-3 rounded-lg hover:bg-[#31363F] transition duration-300">
                 Learn More
               </button>
             </div>
@@ -71,12 +71,12 @@ const Home = () => {
       </section>
 
       {/* Our Services Overview */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-[#EEEEEE]">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4 text-gray-800">
+          <h2 className="text-3xl font-bold mb-4 text-[#222831]">
             Our Services
           </h2>
-          <p className="text-gray-600 mb-12 max-w-3xl mx-auto">
+          <p className="text-[#31363F] mb-12 max-w-3xl mx-auto">
             Explore a comprehensive suite of AI-driven solutions designed to
             enhance and supercharge your business operations. From intelligent
             automation, conversational AI integration to your fingertips.
@@ -84,9 +84,9 @@ const Home = () => {
 
           <div className="grid md:grid-cols-4 gap-8">
             <div className="text-center p-6">
-              <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-[#76ABAE]/20 rounded-lg flex items-center justify-center mx-auto mb-4">
                 <svg
-                  className="w-8 h-8 text-blue-600"
+                  className="w-8 h-8 text-[#76ABAE]"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                 >
@@ -94,16 +94,16 @@ const Home = () => {
                 </svg>
               </div>
               <h3 className="font-bold mb-2">Auto Blog</h3>
-              <p className="text-sm text-gray-600">
+              <p className="text-sm text-[#31363F]">
                 Generate high-quality blog content using AI-powered writing
                 assistance.
               </p>
             </div>
 
             <div className="text-center p-6">
-              <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-[#76ABAE]/20 rounded-lg flex items-center justify-center mx-auto mb-4">
                 <svg
-                  className="w-8 h-8 text-blue-600"
+                  className="w-8 h-8 text-[#76ABAE]"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                 >
@@ -115,16 +115,16 @@ const Home = () => {
                 </svg>
               </div>
               <h3 className="font-bold mb-2">Resume Builder</h3>
-              <p className="text-sm text-gray-600">
+              <p className="text-sm text-[#31363F]">
                 Create effective professional CVs instantly with AI optimization
                 and expert-level formatting.
               </p>
             </div>
 
             <div className="text-center p-6">
-              <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-[#76ABAE]/20 rounded-lg flex items-center justify-center mx-auto mb-4">
                 <svg
-                  className="w-8 h-8 text-blue-600"
+                  className="w-8 h-8 text-[#76ABAE]"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                 >
@@ -132,16 +132,16 @@ const Home = () => {
                 </svg>
               </div>
               <h3 className="font-bold mb-2">Lang. Translator</h3>
-              <p className="text-sm text-gray-600">
+              <p className="text-sm text-[#31363F]">
                 Translate text across multiple languages with real-time AI
                 language processing.
               </p>
             </div>
 
             <div className="text-center p-6">
-              <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-[#76ABAE]/20 rounded-lg flex items-center justify-center mx-auto mb-4">
                 <svg
-                  className="w-8 h-8 text-blue-600"
+                  className="w-8 h-8 text-[#76ABAE]"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                 >
@@ -152,7 +152,7 @@ const Home = () => {
                 </svg>
               </div>
               <h3 className="font-bold mb-2">Docx. Converter</h3>
-              <p className="text-sm text-gray-600">
+              <p className="text-sm text-[#31363F]">
                 Convert documents across formats like PDF, DOCX, HTML with
                 intelligent AI processing.
               </p>
@@ -161,9 +161,9 @@ const Home = () => {
 
           <div className="grid md:grid-cols-4 gap-8 mt-8">
             <div className="text-center p-6">
-              <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-[#76ABAE]/20 rounded-lg flex items-center justify-center mx-auto mb-4">
                 <svg
-                  className="w-8 h-8 text-blue-600"
+                  className="w-8 h-8 text-[#76ABAE]"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                 >
@@ -174,16 +174,16 @@ const Home = () => {
                 </svg>
               </div>
               <h3 className="font-bold mb-2">Job Scrapping</h3>
-              <p className="text-sm text-gray-600">
+              <p className="text-sm text-[#31363F]">
                 Automatically scrape job opportunities from various platforms
                 and stay ahead in your search.
               </p>
             </div>
 
             <div className="text-center p-6">
-              <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-[#76ABAE]/20 rounded-lg flex items-center justify-center mx-auto mb-4">
                 <svg
-                  className="w-8 h-8 text-blue-600"
+                  className="w-8 h-8 text-[#76ABAE]"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                 >
@@ -195,16 +195,16 @@ const Home = () => {
                 </svg>
               </div>
               <h3 className="font-bold mb-2">Text Generation</h3>
-              <p className="text-sm text-gray-600">
+              <p className="text-sm text-[#31363F]">
                 Generate useful and contextual text for various use cases using
                 advanced AI models.
               </p>
             </div>
 
             <div className="text-center p-6">
-              <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-[#76ABAE]/20 rounded-lg flex items-center justify-center mx-auto mb-4">
                 <svg
-                  className="w-8 h-8 text-blue-600"
+                  className="w-8 h-8 text-[#76ABAE]"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                 >
@@ -215,16 +215,16 @@ const Home = () => {
                 </svg>
               </div>
               <h3 className="font-bold mb-2">Img Generation</h3>
-              <p className="text-sm text-gray-600">
+              <p className="text-sm text-[#31363F]">
                 Create AI-generated images from text prompts using
                 state-of-the-art diffusion models.
               </p>
             </div>
 
             <div className="text-center p-6">
-              <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-[#76ABAE]/20 rounded-lg flex items-center justify-center mx-auto mb-4">
                 <svg
-                  className="w-8 h-8 text-blue-600"
+                  className="w-8 h-8 text-[#76ABAE]"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                 >
@@ -235,7 +235,7 @@ const Home = () => {
                 </svg>
               </div>
               <h3 className="font-bold mb-2">Frontend Dev.</h3>
-              <p className="text-sm text-gray-600">
+              <p className="text-sm text-[#31363F]">
                 Create high-level modern responsive web applications using
                 artificial intelligence and code generation.
               </p>
@@ -245,10 +245,10 @@ const Home = () => {
       </section>
 
       {/* Learning Tutorial Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-[#EEEEEE]">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4 text-gray-800">
+            <h2 className="text-3xl font-bold mb-4 text-[#222831]">
               Learning Tutorial
             </h2>
           </div>
@@ -260,19 +260,19 @@ const Home = () => {
               </div>
             </div>
             <div>
-              <h3 className="text-2xl font-bold mb-4 text-gray-800">
+              <h3 className="text-2xl font-bold mb-4 text-[#222831]">
                 Start Your AI Learning Journey
               </h3>
-              <p className="text-gray-600 mb-6">
+              <p className="text-[#31363F] mb-6">
                 Explore our comprehensive AI, Auto-blogging, and GPT hands-on
                 tutorials with interactive UI coding. Learn by doing with
                 practical and real-world examples.
               </p>
 
               <ul className="space-y-3 mb-6">
-                <li className="flex items-center text-gray-700">
+                <li className="flex items-center text-[#222831]">
                   <svg
-                    className="w-5 h-5 text-green-500 mr-3"
+                    className="w-5 h-5 text-[#76ABAE] mr-3"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                   >
@@ -283,9 +283,9 @@ const Home = () => {
                   </svg>
                   Dive into Generative AI
                 </li>
-                <li className="flex items-center text-gray-700">
+                <li className="flex items-center text-[#222831]">
                   <svg
-                    className="w-5 h-5 text-green-500 mr-3"
+                    className="w-5 h-5 text-[#76ABAE] mr-3"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                   >
@@ -296,9 +296,9 @@ const Home = () => {
                   </svg>
                   Auto Blogging with GPT
                 </li>
-                <li className="flex items-center text-gray-700">
+                <li className="flex items-center text-[#222831]">
                   <svg
-                    className="w-5 h-5 text-green-500 mr-3"
+                    className="w-5 h-5 text-[#76ABAE] mr-3"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                   >
@@ -309,9 +309,9 @@ const Home = () => {
                   </svg>
                   Build Real AI Projects
                 </li>
-                <li className="flex items-center text-gray-700">
+                <li className="flex items-center text-[#222831]">
                   <svg
-                    className="w-5 h-5 text-green-500 mr-3"
+                    className="w-5 h-5 text-[#76ABAE] mr-3"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                   >
@@ -324,7 +324,7 @@ const Home = () => {
                 </li>
               </ul>
 
-              <button className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition duration-300">
+              <button className="bg-[#76ABAE] text-[#EEEEEE] px-6 py-3 rounded-lg hover:bg-[#31363F] transition duration-300">
                 Start Learning
               </button>
             </div>
@@ -333,51 +333,51 @@ const Home = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-[#EEEEEE]">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-3xl font-bold mb-8 text-gray-800">
+              <h2 className="text-3xl font-bold mb-8 text-[#222831]">
                 Frequently Asked Questions
               </h2>
 
               <div className="space-y-4">
-                <div className="border-b pb-4">
-                  <button className="w-full text-left font-semibold text-gray-800 hover:text-blue-600 transition">
+                <div className="border-b border-[#31363F]/20 pb-4">
+                  <button className="w-full text-left font-semibold text-[#222831] hover:text-[#76ABAE] transition">
                     What is GenerativeAiX used for?
                   </button>
-                  <p className="text-gray-600 mt-2 text-sm">
+                  <p className="text-[#31363F] mt-2 text-sm">
                     GenerativeAiX is a platform offering AI-powered solutions
                     for content creation, automation, translation, and much more
                     to accelerate and enhance productivity.
                   </p>
                 </div>
 
-                <div className="border-b pb-4">
-                  <button className="w-full text-left font-semibold text-gray-800 hover:text-blue-600 transition">
+                <div className="border-b border-[#31363F]/20 pb-4">
+                  <button className="w-full text-left font-semibold text-[#222831] hover:text-[#76ABAE] transition">
                     Can I generate images from text prompts?
                   </button>
-                  <p className="text-gray-600 mt-2 text-sm">
+                  <p className="text-[#31363F] mt-2 text-sm">
                     Yes, our platform includes advanced text-to-image generation
                     capabilities using state-of-the-art AI models.
                   </p>
                 </div>
 
-                <div className="border-b pb-4">
-                  <button className="w-full text-left font-semibold text-gray-800 hover:text-blue-600 transition">
+                <div className="border-b border-[#31363F]/20 pb-4">
+                  <button className="w-full text-left font-semibold text-[#222831] hover:text-[#76ABAE] transition">
                     Is there a learning tutorial available?
                   </button>
-                  <p className="text-gray-600 mt-2 text-sm">
+                  <p className="text-[#31363F] mt-2 text-sm">
                     Absolutely! We provide comprehensive tutorials and hands-on
                     learning experiences for all skill levels.
                   </p>
                 </div>
 
-                <div className="border-b pb-4">
-                  <button className="w-full text-left font-semibold text-gray-800 hover:text-blue-600 transition">
+                <div className="border-b border-[#31363F]/20 pb-4">
+                  <button className="w-full text-left font-semibold text-[#222831] hover:text-[#76ABAE] transition">
                     What pricing plans do you offer?
                   </button>
-                  <p className="text-gray-600 mt-2 text-sm">
+                  <p className="text-[#31363F] mt-2 text-sm">
                     We offer flexible pricing plans starting from basic free
                     tier to premium enterprise solutions.
                   </p>
@@ -397,20 +397,20 @@ const Home = () => {
       </section>
 
       {/* Call to Action Section */}
-      <section className="py-16 bg-blue-600 text-white">
+      <section className="py-16 bg-[#76ABAE] text-[#EEEEEE]">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">
             Ready to Transform Your Business with AI?
           </h2>
-          <p className="text-blue-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-[#EEEEEE]/80 mb-8 max-w-2xl mx-auto">
             Join thousands of businesses already using our AI-powered solutions
             to automate processes, generate content, and accelerate growth.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300">
+            <button className="bg-[#EEEEEE] text-[#76ABAE] px-8 py-3 rounded-lg font-semibold hover:bg-[#EEEEEE]/90 transition duration-300">
               Get Started Free
             </button>
-            <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition duration-300">
+            <button className="border border-[#EEEEEE] text-[#EEEEEE] px-8 py-3 rounded-lg font-semibold hover:bg-[#EEEEEE] hover:text-[#76ABAE] transition duration-300">
               Schedule Demo
             </button>
           </div>

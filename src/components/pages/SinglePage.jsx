@@ -71,13 +71,13 @@ const SinglePage = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-100">
+      <section className="py-20 bg-gradient-to-br from-[#EEEEEE] to-[#76ABAE]/20">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-5xl font-bold text-gray-900 mb-6">
+            <h1 className="text-5xl font-bold text-[#222831] mb-6">
               Complete AI Solutions Hub
             </h1>
-            <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+            <p className="text-xl text-[#31363F] mb-8 leading-relaxed">
               Everything you need to transform your business with artificial intelligence. 
               From consultation to deployment, we provide end-to-end AI solutions.
             </p>
@@ -90,11 +90,11 @@ const SinglePage = () => {
       </section>
 
       {/* Services Overview */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-[#EEEEEE]">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our AI Tools & Services</h2>
-            <p className="text-xl text-gray-600">Comprehensive suite of AI-powered solutions</p>
+            <h2 className="text-4xl font-bold text-[#222831] mb-4">Our AI Tools & Services</h2>
+            <p className="text-xl text-[#31363F]">Comprehensive suite of AI-powered solutions</p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -106,12 +106,12 @@ const SinglePage = () => {
                   className="text-center cursor-pointer transform hover:scale-105 transition-transform duration-200"
                   onClick={() => handleServiceClick(service)}
                 >
-                  <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <IconComponent className="text-white" size={24} />
+                  <div className="w-16 h-16 bg-gradient-to-r from-[#76ABAE] to-[#31363F] rounded-full flex items-center justify-center mx-auto mb-4">
+                    <IconComponent className="text-[#EEEEEE]" size={24} />
                   </div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{service.title}</h3>
-                  <p className="text-gray-600 text-sm mb-3">{service.description.substring(0, 80)}...</p>
-                  <span className="inline-block px-3 py-1 bg-blue-100 text-blue-600 text-xs font-medium rounded-full">
+                  <h3 className="text-lg font-semibold text-[#222831] mb-2">{service.title}</h3>
+                  <p className="text-[#31363F] text-sm mb-3">{service.description.substring(0, 80)}...</p>
+                  <span className="inline-block px-3 py-1 bg-[#76ABAE]/20 text-[#76ABAE] text-xs font-medium rounded-full">
                     {service.category}
                   </span>
                 </Card>
@@ -122,45 +122,45 @@ const SinglePage = () => {
       </section>
 
       {/* Comparison Table */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-[#EEEEEE]">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Feature Comparison</h2>
-            <p className="text-xl text-gray-600">See what makes our AI solutions superior</p>
+            <h2 className="text-4xl font-bold text-[#222831] mb-4">Feature Comparison</h2>
+            <p className="text-xl text-[#31363F]">See what makes our AI solutions superior</p>
           </div>
           
           <div className="max-w-4xl mx-auto">
             <Card className="overflow-hidden">
               <div className="overflow-x-auto">
                 <table className="w-full">
-                  <thead className="bg-gray-50">
+                  <thead className="bg-[#76ABAE]/10">
                     <tr>
-                      <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">Features</th>
-                      <th className="px-6 py-4 text-center text-sm font-semibold text-gray-900">Basic</th>
-                      <th className="px-6 py-4 text-center text-sm font-semibold text-gray-900">Professional</th>
-                      <th className="px-6 py-4 text-center text-sm font-semibold text-gray-900">Enterprise</th>
+                      <th className="px-6 py-4 text-left text-sm font-semibold text-[#222831]">Features</th>
+                      <th className="px-6 py-4 text-center text-sm font-semibold text-[#222831]">Basic</th>
+                      <th className="px-6 py-4 text-center text-sm font-semibold text-[#222831]">Professional</th>
+                      <th className="px-6 py-4 text-center text-sm font-semibold text-[#222831]">Enterprise</th>
                     </tr>
                   </thead>
-                  <tbody className="divide-y divide-gray-200">
+                  <tbody className="divide-y divide-[#76ABAE]/20">
                     {comparisonFeatures.map((feature, index) => (
                       <tr key={index}>
-                        <td className="px-6 py-4 text-sm text-gray-900">{feature}</td>
+                        <td className="px-6 py-4 text-sm text-[#222831]">{feature}</td>
                         <td className="px-6 py-4 text-center">
                           {index < 4 ? (
-                            <CheckCircle className="text-green-500 mx-auto" size={20} />
+                            <CheckCircle className="text-[#76ABAE] mx-auto" size={20} />
                           ) : (
-                            <X className="text-gray-400 mx-auto" size={20} />
+                            <X className="text-[#31363F] mx-auto" size={20} />
                           )}
                         </td>
                         <td className="px-6 py-4 text-center">
                           {index < 6 ? (
-                            <CheckCircle className="text-green-500 mx-auto" size={20} />
+                            <CheckCircle className="text-[#76ABAE] mx-auto" size={20} />
                           ) : (
-                            <X className="text-gray-400 mx-auto" size={20} />
+                            <X className="text-[#31363F] mx-auto" size={20} />
                           )}
                         </td>
                         <td className="px-6 py-4 text-center">
-                          <CheckCircle className="text-green-500 mx-auto" size={20} />
+                          <CheckCircle className="text-[#76ABAE] mx-auto" size={20} />
                         </td>
                       </tr>
                     ))}
@@ -176,11 +176,11 @@ const SinglePage = () => {
     
 
       {/* Why Choose Us */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-[#EEEEEE]">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose GenerativeAix?</h2>
-            <p className="text-xl text-gray-600">The advantages that set us apart</p>
+            <h2 className="text-4xl font-bold text-[#222831] mb-4">Why Choose GenerativeAix?</h2>
+            <p className="text-xl text-[#31363F]">The advantages that set us apart</p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -188,11 +188,11 @@ const SinglePage = () => {
               const IconComponent = item.icon;
               return (
                 <Card key={index} className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <IconComponent className="text-white" size={24} />
+                  <div className="w-16 h-16 bg-gradient-to-r from-[#76ABAE] to-[#31363F] rounded-full flex items-center justify-center mx-auto mb-4">
+                    <IconComponent className="text-[#EEEEEE]" size={24} />
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{item.title}</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">{item.description}</p>
+                  <h3 className="text-xl font-semibold text-[#222831] mb-3">{item.title}</h3>
+                  <p className="text-[#31363F] text-sm leading-relaxed">{item.description}</p>
                 </Card>
               );
             })}
@@ -201,17 +201,17 @@ const SinglePage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-blue-600 text-white">
+      <section className="py-16 bg-[#76ABAE] text-[#EEEEEE]">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-4">Ready to Transform Your Business?</h2>
           <p className="text-xl mb-8 opacity-90">
             Get started with our AI solutions today and see the difference
           </p>
           <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center">
-            <Button variant="ghost" size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
+            <Button variant="ghost" size="lg" className="bg-[#EEEEEE] text-[#76ABAE] hover:bg-[#EEEEEE]/90">
               Schedule Demo
             </Button>
-            <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-blue-600">
+            <Button variant="outline" size="lg" className="border-[#EEEEEE] text-[#EEEEEE] hover:bg-[#EEEEEE] hover:text-[#76ABAE]">
               Contact Sales
             </Button>
           </div>
@@ -229,29 +229,29 @@ const SinglePage = () => {
           <div>
             <div className="flex items-center mb-4">
               {React.createElement(selectedService.icon, { 
-                className: "text-blue-600 mr-3", 
+                className: "text-[#76ABAE] mr-3", 
                 size: 32 
               })}
-              <span className="px-3 py-1 bg-blue-100 text-blue-600 text-sm font-medium rounded-full">
+              <span className="px-3 py-1 bg-[#76ABAE]/20 text-[#76ABAE] text-sm font-medium rounded-full">
                 {selectedService.category}
               </span>
             </div>
-            <p className="text-gray-600 mb-6 leading-relaxed">
+            <p className="text-[#31363F] mb-6 leading-relaxed">
               {selectedService.description}
             </p>
             <div className="grid md:grid-cols-2 gap-4 mb-6">
-              <div className="bg-gray-50 p-4 rounded-lg">
-                <h4 className="font-semibold text-gray-900 mb-2">Key Features</h4>
-                <ul className="text-sm text-gray-600 space-y-1">
+              <div className="bg-[#76ABAE]/10 p-4 rounded-lg">
+                <h4 className="font-semibold text-[#222831] mb-2">Key Features</h4>
+                <ul className="text-sm text-[#31363F] space-y-1">
                   <li>• Advanced AI algorithms</li>
                   <li>• Real-time processing</li>
                   <li>• Custom integration</li>
                   <li>• 24/7 support</li>
                 </ul>
               </div>
-              <div className="bg-gray-50 p-4 rounded-lg">
-                <h4 className="font-semibold text-gray-900 mb-2">Benefits</h4>
-                <ul className="text-sm text-gray-600 space-y-1">
+              <div className="bg-[#76ABAE]/10 p-4 rounded-lg">
+                <h4 className="font-semibold text-[#222831] mb-2">Benefits</h4>
+                <ul className="text-sm text-[#31363F] space-y-1">
                   <li>• Increased efficiency</li>
                   <li>• Cost reduction</li>
                   <li>• Improved accuracy</li>

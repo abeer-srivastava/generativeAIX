@@ -60,9 +60,9 @@ const Portfolio = () => {
 	return (
 		<div>
 			{/* Hero */}
-			<section className="bg-gradient-to-r from-blue-600 to-blue-400 py-14">
+			<section className="bg-gradient-to-r from-[#76ABAE] to-[#31363F] py-14">
 				<div className="container mx-auto px-4 text-center">
-					<div className="text-white text-sm mb-2 opacity-80">
+					<div className="text-[#EEEEEE] text-sm mb-2 opacity-80">
 						Home &gt;{' '}
 						<span className="font-semibold">Portfolio</span>
 					</div>
@@ -73,13 +73,13 @@ const Portfolio = () => {
 			</section>
 
 			{/* Modules */}
-			<section className="py-16 bg-white">
+			<section className="py-16 bg-[#EEEEEE]">
 				<div className="container mx-auto px-4">
 					<div className="text-center mb-8">
 						<h2 className="text-2xl md:text-3xl font-bold mb-2">
 							OUR MODULES
 						</h2>
-						<p className="text-gray-500 max-w-xl mx-auto">
+						<p className="text-[#31363F] max-w-xl mx-auto">
 							This section showcases the main modules of the GenerativeAix
 							platform. Hundreds of powerful productivity and conversion tools.
 						</p>
@@ -91,8 +91,8 @@ const Portfolio = () => {
 								key={f}
 								className={`px-5 py-2 rounded-full border transition ${
 									active === f
-										? 'bg-blue-600 text-white'
-										: 'bg-white text-blue-600 border-blue-600 hover:bg-blue-50'
+										? 'bg-[#76ABAE] text-[#EEEEEE]'
+										: 'bg-[#EEEEEE] text-[#76ABAE] border-[#76ABAE] hover:bg-[#76ABAE]/10'
 								}`}
 								onClick={() => setActive(f)}
 							>
@@ -105,16 +105,16 @@ const Portfolio = () => {
 						{filtered.map((mod, i) => (
 							<div
 								key={i}
-								className="bg-white rounded-xl shadow-md hover:shadow-xl transition overflow-hidden flex flex-col items-center justify-between py-6 px-4 min-h-[220px]"
+								className="bg-[#EEEEEE] rounded-xl shadow-md hover:shadow-xl transition overflow-hidden flex flex-col items-center justify-between py-6 px-4 min-h-[220px] border border-[#76ABAE]/20"
 							>
 								<div className="mb-4 flex">
-									<SquareMenu  size={48} color="#1e293b" />
+									<SquareMenu  size={48} className="text-[#222831]" />
 								</div>
 								<div className="w-full text-center mt-auto">
-									<h3 className="font-bold text-lg text-gray-700 mb-1">
+									<h3 className="font-bold text-lg text-[#222831] mb-1">
 										{mod.title}
 									</h3>
-									<p className="text-blue-700 font-medium text-sm">
+									<p className="text-[#76ABAE] font-medium text-sm">
 										{mod.subtitle}
 									</p>
 								</div>
@@ -123,7 +123,7 @@ const Portfolio = () => {
 					</div>
 					{/* Load More */}
 					<div className="flex justify-center">
-						<button className="bg-blue-600 text-white px-8 py-2 rounded-lg font-semibold hover:bg-blue-700 transition">
+						<button className="bg-[#76ABAE] text-[#EEEEEE] px-8 py-2 rounded-lg font-semibold hover:bg-[#31363F] transition">
 							LOAD PAGE
 						</button>
 					</div>
@@ -131,12 +131,12 @@ const Portfolio = () => {
 			</section>
 
 			{/* CTA */}
-			<section className="bg-gradient-to-r from-blue-700 to-blue-500 py-12">
+			<section className="bg-gradient-to-r from-[#31363F] to-[#76ABAE] py-12">
 				<div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between">
-					<div className="text-white text-2xl font-bold mb-4 md:mb-0">
+					<div className="text-[#EEEEEE] text-2xl font-bold mb-4 md:mb-0">
 						START AUTOMATING WITH GENERATIVEAIX
 					</div>
-					<button className="bg-white text-blue-700 px-6 py-2 rounded-lg font-semibold hover:bg-blue-50 transition">
+					<button className="bg-[#EEEEEE] text-[#76ABAE] px-6 py-2 rounded-lg font-semibold hover:bg-[#EEEEEE]/90 transition">
 						CONTACT US
 					</button>
 				</div>

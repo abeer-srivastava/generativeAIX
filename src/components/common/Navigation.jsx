@@ -18,8 +18,8 @@ const Navigation = ({ currentPage, setCurrentPage }) => {
           onClick={() => setCurrentPage(item.id)}
           className={`font-medium transition-colors ${
             currentPage === item.id
-              ? 'text-blue-500 border-b-2 border-blue-300'
-              : 'text-gray-700 hover:text-blue-600'
+              ? 'text-[#76ABAE] border-b-2 border-[#76ABAE]'
+              : 'text-[#31363F] hover:text-[#76ABAE]'
           }`}
         >
           {item.label}
