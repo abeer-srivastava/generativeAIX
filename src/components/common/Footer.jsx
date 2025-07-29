@@ -24,11 +24,19 @@ const Footer = ({ setCurrentPage }) => {
             <p className="text-[#EEEEEE]/70 mb-4">
               Leading AI solutions provider, transforming businesses with cutting-edge artificial intelligence technologies.
             </p>
-            <div className="flex space-x-3">
-              <Facebook size={20} className="hover:text-[#76ABAE] cursor-pointer" />
-              <Twitter size={20} className="hover:text-[#76ABAE] cursor-pointer" />
-              <Instagram size={20} className="hover:text-[#76ABAE] cursor-pointer" />
-              <Linkedin size={20} className="hover:text-[#76ABAE] cursor-pointer" />
+            <div className="flex items-center space-x-2 sm:space-x-3 mobile-social-icons">
+              <a target="#" href="https://www.facebook.com/profile.php?id=61578882025775" className="hover:text-[#222831] transition-colors">
+                <Facebook size={14} className="sm:w-4 sm:h-4" />
+              </a>
+              <a target="#" href="https://x.com/Generative_Aix" className="hover:text-[#222831] transition-colors">
+                <Twitter size={14} className="sm:w-4 sm:h-4" />
+              </a>
+              <a target="#" href="https://www.instagram.com/generativeaix?igsh=MnhxM2ZjdXl4c3N0" className="hover:text-[#222831] transition-colors">
+                <Instagram size={14} className="sm:w-4 sm:h-4" />
+              </a>
+              <a target="#" href="https://www.linkedin.com/in/generative-aix-363ba1376/" className="hover:text-[#222831] transition-colors">
+                <Linkedin size={14} className="sm:w-4 sm:h-4" />
+              </a>
             </div>
           </div>
 

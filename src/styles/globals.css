@@ -473,3 +473,477 @@
     color: black;
   }
 }
+
+/* ===== RESPONSIVE DESIGN MEDIA QUERIES ===== */
+
+/* Mobile devices (320x480) */
+@media screen and (max-width: 480px) {
+  /* Base styles adjustments */
+  body {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  /* Prevent body scroll when mobile menu is open */
+  body.mobile-menu-open {
+    overflow: hidden;
+  }
+
+  /* Container adjustments */
+  .container {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    max-width: 100%;
+  }
+
+  /* Typography adjustments */
+  h1 {
+    font-size: 1.75rem !important;
+    line-height: 1.2 !important;
+  }
+
+  h2 {
+    font-size: 1.5rem !important;
+    line-height: 1.3 !important;
+  }
+
+  h3 {
+    font-size: 1.25rem !important;
+    line-height: 1.3 !important;
+  }
+
+  h4 {
+    font-size: 1.125rem !important;
+    line-height: 1.4 !important;
+  }
+
+  p {
+    font-size: 0.875rem !important;
+    line-height: 1.5 !important;
+  }
+
+  /* Button adjustments */
+  .btn-primary,
+  .btn-secondary,
+  .btn-ghost {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-size: 0.875rem;
+    min-height: 2.5rem;
+  }
+
+  /* Card adjustments */
+  .card {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  /* Input field adjustments */
+  .input-field {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-size: 0.875rem;
+  }
+
+  /* Section padding adjustments */
+  .section-padding {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  /* Grid adjustments - More specific */
+  .lg\:grid-cols-2,
+  .lg\:grid-cols-3,
+  .lg\:grid-cols-4 {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+
+  /* Flex adjustments - More specific */
+  .lg\:flex-row {
+    flex-direction: column !important;
+  }
+
+  /* Spacing adjustments - More specific */
+  .lg\:space-x-4 > * + * {
+    margin-left: 0 !important;
+    margin-top: 1rem !important;
+  }
+
+  .lg\:space-y-0 > * + * {
+    margin-top: 1rem !important;
+  }
+
+  /* Header specific adjustments */
+  header .container {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  /* Hero section adjustments */
+  .py-20 {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+
+  .text-5xl {
+    font-size: 2rem !important;
+    line-height: 1.2 !important;
+  }
+
+  .text-xl {
+    font-size: 1rem !important;
+    line-height: 1.5 !important;
+  }
+
+  /* Image adjustments */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Logo adjustments */
+  .w-25 {
+    width: 4rem !important;
+  }
+
+  .h-25 {
+    height: 4rem !important;
+  }
+
+  /* Social icons adjustments */
+  .space-x-3 > * + * {
+    margin-left: 0.5rem !important;
+  }
+
+  /* Top bar adjustments */
+  .bg-\[#76ABAE\] .container {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  .bg-\[#76ABAE\] .flex {
+    justify-content: center;
+  }
+
+  /* Additional mobile-specific utilities */
+  .mobile-hidden {
+    display: none !important;
+  }
+
+  .mobile-block {
+    display: block !important;
+  }
+
+  .mobile-text-center {
+    text-align: center !important;
+  }
+
+  .mobile-text-left {
+    text-align: left !important;
+  }
+
+  .mobile-text-right {
+    text-align: right !important;
+  }
+
+  .mobile-p-2 {
+    padding: 0.5rem !important;
+  }
+
+  .mobile-p-4 {
+    padding: 1rem !important;
+  }
+
+  .mobile-m-2 {
+    margin: 0.5rem !important;
+  }
+
+  .mobile-m-4 {
+    margin: 1rem !important;
+  }
+
+  /* Mobile header improvements */
+  .mobile-header-logo {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .mobile-contact-info {
+    font-size: 0.75rem;
+  }
+
+  .mobile-social-icons {
+    gap: 0.5rem;
+  }
+
+  .mobile-social-icons a {
+    padding: 0.25rem;
+  }
+}
+
+/* Tablet devices (481px - 1023px) */
+@media screen and (min-width: 481px) and (max-width: 1023px) {
+  /* Base styles adjustments */
+  body {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  /* Container adjustments */
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    max-width: 100%;
+  }
+
+  /* Typography adjustments */
+  h1 {
+    font-size: 2.5rem !important;
+    line-height: 1.2 !important;
+  }
+
+  h2 {
+    font-size: 2rem !important;
+    line-height: 1.3 !important;
+  }
+
+  h3 {
+    font-size: 1.5rem !important;
+    line-height: 1.3 !important;
+  }
+
+  h4 {
+    font-size: 1.25rem !important;
+    line-height: 1.4 !important;
+  }
+
+  p {
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
+  }
+
+  /* Button adjustments */
+  .btn-primary,
+  .btn-secondary,
+  .btn-ghost {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
+    font-size: 0.9375rem;
+    min-height: 2.75rem;
+  }
+
+  /* Card adjustments */
+  .card {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Input field adjustments */
+  .input-field {
+    padding-left: 0.875rem;
+    padding-right: 0.875rem;
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
+    font-size: 0.9375rem;
+  }
+
+  /* Section padding adjustments */
+  .section-padding {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  /* Grid adjustments for tablet */
+  .lg\:grid-cols-2 {
+    grid-template-columns: 1fr !important;
+  }
+
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .lg\:grid-cols-4 {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  /* Flex adjustments */
+  .lg\:flex-row {
+    flex-direction: column !important;
+  }
+
+  /* Spacing adjustments */
+  .lg\:space-x-4 > * + * {
+    margin-left: 0 !important;
+    margin-top: 1rem !important;
+  }
+
+  .lg\:space-y-0 {
+    margin-top: 1rem !important;
+  }
+
+  /* Header specific adjustments */
+  header .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  /* Hero section adjustments */
+  .py-20 {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+
+  .text-5xl {
+    font-size: 3rem !important;
+    line-height: 1.2 !important;
+  }
+
+  .text-xl {
+    font-size: 1.125rem !important;
+    line-height: 1.6 !important;
+  }
+
+  /* Image adjustments */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Logo adjustments */
+  .w-25 {
+    width: 5rem !important;
+  }
+
+  .h-25 {
+    height: 5rem !important;
+  }
+
+  /* Navigation adjustments for tablet */
+  nav {
+    display: flex;
+    align-items: center;
+  }
+
+  /* Top bar adjustments */
+  .bg-\[#76ABAE\] .container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* Responsive text utilities */
+  .text-sm {
+    font-size: 0.875rem !important;
+  }
+
+  .text-base {
+    font-size: 1rem !important;
+  }
+
+  .text-lg {
+    font-size: 1.125rem !important;
+  }
+
+  .text-xl {
+    font-size: 1.25rem !important;
+  }
+
+  .text-2xl {
+    font-size: 1.5rem !important;
+  }
+
+  .text-3xl {
+    font-size: 1.875rem !important;
+  }
+
+  .text-4xl {
+    font-size: 2.25rem !important;
+  }
+
+  .text-5xl {
+    font-size: 3rem !important;
+  }
+
+  /* Additional tablet-specific utilities */
+  .tablet-hidden {
+    display: none !important;
+  }
+
+  .tablet-block {
+    display: block !important;
+  }
+
+  .tablet-text-center {
+    text-align: center !important;
+  }
+
+  .tablet-text-left {
+    text-align: left !important;
+  }
+
+  .tablet-text-right {
+    text-align: right !important;
+  }
+}
+
+/* Large screens (1024px+) - Desktop */
+@media screen and (min-width: 1024px) {
+  /* Maintain all original styles for larger screens */
+  .container {
+    max-width: 80rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .section-padding {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+
+  /* Restore original grid layouts */
+  .lg\:grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .lg\:grid-cols-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* Restore original flex layouts */
+  .lg\:flex-row {
+    flex-direction: row;
+  }
+
+  /* Restore original spacing */
+  .lg\:space-x-4 > * + * {
+    margin-left: 1rem;
+    margin-top: 0;
+  }
+
+  .lg\:space-y-0 > * + * {
+    margin-top: 0;
+  }
+
+  /* Hide mobile/tablet specific utilities on desktop */
+  .mobile-hidden,
+  .tablet-hidden {
+    display: initial !important;
+  }
+
+  .mobile-block,
+  .tablet-block {
+    display: initial !important;
+  }
+}

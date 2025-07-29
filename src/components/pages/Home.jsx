@@ -33,12 +33,13 @@ const Home = () => {
       </section>
 
       {/* About Us Section */}
+      {/*  images/team/team.png*/}
       <section className="py-16 bg-[#EEEEEE]">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <img
-                src="/images/team-meeting.jpg"
+                src="/images/team/team.png"
                 alt="Team meeting"
                 className="rounded-lg shadow-lg w-full"
               />
@@ -252,10 +253,16 @@ const Home = () => {
               Learning Tutorial
             </h2>
           </div>
-
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          {/* genaiX/public/images/team/meetingteam.png */}
+          <div className="grid md:grid-cols-2 gap-12 ">
             <div>
               <div className="border-black">
+                <img
+                  src="/images/team/meetingteam.png "
+                  alt="Team meeting"
+                  className="rounded-lg shadow-lg w-full"
+                />
+
                 <video src="" width="500" height="300"></video>
               </div>
             </div>
@@ -331,7 +338,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-
+      {/* genaiX/public/images/team/FAQ.png */}
       {/* FAQ Section */}
       <section className="py-16 bg-[#EEEEEE]">
         <div className="container mx-auto px-4">
@@ -386,10 +393,10 @@ const Home = () => {
             </div>
 
             <div className="flex items-center justify-center">
-              <img
-                src="/images/faq-illustration.jpg"
-                alt="FAQ illustration"
-                className="rounded-lg shadow-lg max-w-full h-auto"
+               <img
+                src="/images/team/FAQ.png"
+                alt="Team meeting"
+                className="rounded-lg shadow-lg w-full"
               />
             </div>
           </div>

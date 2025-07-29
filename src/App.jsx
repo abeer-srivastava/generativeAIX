@@ -24,9 +24,9 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-[#EEEEEE] w-full">
       <Header currentPage={currentPage} setCurrentPage={setCurrentPage} />
-      <main>
+      <main className="w-full">
         {renderPage()}
       </main>
       <Footer setCurrentPage={setCurrentPage} />

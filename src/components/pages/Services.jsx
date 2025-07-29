@@ -5,12 +5,6 @@ import Button from '../ui/Button';
 import { ArrowRight, CheckCircle } from 'lucide-react';
 
 
-
-
-
-
-
-
 const Services = () => {
   const serviceFeatures = [
     "24/7 Customer Support",
@@ -52,15 +46,15 @@ const Services = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-[#EEEEEE] to-[#76ABAE]/20">
+      <section className="py-8 sm:py-12 lg:py-20 bg-gradient-to-br from-[#EEEEEE] to-[#76ABAE]/20">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-5xl font-bold text-[#222831] mb-6">Our AI Services</h1>
-            <p className="text-xl text-[#31363F] mb-8 leading-relaxed">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#222831] mb-4 lg:mb-6">Our AI Services</h1>
+            <p className="text-base sm:text-lg lg:text-xl text-[#31363F] mb-6 lg:mb-8 leading-relaxed">
               Comprehensive artificial intelligence solutions designed to transform your business 
               operations, enhance productivity, and drive innovation across all industries.
             </p>
-            <Button size="lg" className="mb-8">
+            <Button size="lg" className="mb-6 lg:mb-8">
               Get Started Today
               <ArrowRight className="ml-2" size={20} />
             </Button>
@@ -72,40 +66,40 @@ const Services = () => {
       <ServicesGrid showAll={true} />
 
       {/* Why Choose Us */}
-      <section className="py-16 bg-[#EEEEEE]">
+      <section className="py-8 sm:py-12 lg:py-16 bg-[#EEEEEE]">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-4xl font-bold text-[#222831] mb-6">Why Choose GenerativeAix?</h2>
-              <p className="text-[#31363F] mb-8 leading-relaxed">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <div className="text-center lg:text-left">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#222831] mb-4 lg:mb-6">Why Choose GenerativeAix?</h2>
+              <p className="text-sm sm:text-base lg:text-lg text-[#31363F] mb-6 lg:mb-8 leading-relaxed">
                 We combine cutting-edge AI technology with deep industry expertise to deliver 
                 solutions that not only meet your current needs but also scale with your future growth.
               </p>
               
-              <div className="space-y-4">
+              <div className="space-y-3 lg:space-y-4">
                 {serviceFeatures.map((feature, index) => (
-                  <div key={index} className="flex items-center space-x-3">
-                    <CheckCircle className="text-[#76ABAE] flex-shrink-0" size={20} />
-                    <span className="text-[#222831]">{feature}</span>
+                  <div key={index} className="flex items-center space-x-3 justify-center lg:justify-start">
+                    <CheckCircle className="text-[#76ABAE] flex-shrink-0" size={18} />
+                    <span className="text-sm sm:text-base text-[#222831]">{feature}</span>
                   </div>
                 ))}
               </div>
             </div>
             
-            <Card className="p-8">
-              <h3 className="text-2xl font-bold text-[#222831] mb-6">Service Highlights</h3>
-              <div className="space-y-6">
-                <div className="border-l-4 border-[#76ABAE] pl-4">
-                  <h4 className="font-semibold text-[#222831]">Custom AI Development</h4>
-                  <p className="text-[#31363F] text-sm mt-1">Tailored solutions built specifically for your business needs</p>
+            <Card className="p-4 sm:p-6 lg:p-8">
+              <h3 className="text-xl sm:text-2xl font-bold text-[#222831] mb-4 lg:mb-6">Service Highlights</h3>
+              <div className="space-y-4 lg:space-y-6">
+                <div className="border-l-4 border-[#76ABAE] pl-3 lg:pl-4">
+                  <h4 className="font-semibold text-sm sm:text-base text-[#222831]">Custom AI Development</h4>
+                  <p className="text-xs sm:text-sm text-[#31363F] mt-1">Tailored solutions built specifically for your business needs</p>
                 </div>
-                <div className="border-l-4 border-[#31363F] pl-4">
-                  <h4 className="font-semibold text-[#222831]">Enterprise Integration</h4>
-                  <p className="text-[#31363F] text-sm mt-1">Seamless integration with your existing systems and workflows</p>
+                <div className="border-l-4 border-[#31363F] pl-3 lg:pl-4">
+                  <h4 className="font-semibold text-sm sm:text-base text-[#222831]">Enterprise Integration</h4>
+                  <p className="text-xs sm:text-sm text-[#31363F] mt-1">Seamless integration with your existing systems and workflows</p>
                 </div>
-                <div className="border-l-4 border-[#76ABAE] pl-4">
-                  <h4 className="font-semibold text-[#222831]">Ongoing Support</h4>
-                  <p className="text-[#31363F] text-sm mt-1">Continuous monitoring, updates, and optimization</p>
+                <div className="border-l-4 border-[#76ABAE] pl-3 lg:pl-4">
+                  <h4 className="font-semibold text-sm sm:text-base text-[#222831]">Performance Optimization</h4>
+                  <p className="text-xs sm:text-sm text-[#31363F] mt-1">Continuous monitoring and optimization for peak performance</p>
                 </div>
               </div>
             </Card>
@@ -113,27 +107,26 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Process */}
-      <section className="py-16 bg-[#EEEEEE]">
+      {/* Process Section */}
+      <section className="py-8 sm:py-12 lg:py-16">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-[#222831] mb-4">Our Process</h2>
-            <p className="text-xl text-[#31363F]">How we deliver exceptional AI solutions</p>
+          <div className="text-center mb-8 lg:mb-12">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#222831] mb-4 lg:mb-6">Our Development Process</h2>
+            <p className="text-sm sm:text-base lg:text-lg text-[#31363F] max-w-3xl mx-auto">
+              A proven methodology that ensures successful delivery of AI solutions tailored to your specific requirements.
+            </p>
           </div>
           
-          <div className="max-w-4xl mx-auto">
-            <div className="grid md:grid-cols-5 gap-6">
-              {processSteps.map((process, index) => (
-                <div key={index} className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-[#76ABAE] to-[#31363F] rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-[#EEEEEE] font-bold text-lg">{process.step}</span>
-                  </div>
-                  <h3 className="text-lg font-semibold text-[#222831] mb-2">{process.title}</h3>
-                  <p className="text-[#31363F] text-sm leading-relaxed">{process.description}</p>
-                  
+          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-8">
+            {processSteps.map((step, index) => (
+              <Card key={index} className="p-4 sm:p-6 text-center">
+                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-[#76ABAE] text-[#EEEEEE] rounded-full flex items-center justify-center mx-auto mb-4 text-sm sm:text-lg font-bold">
+                  {step.step}
                 </div>
-              ))}
-            </div>
+                <h3 className="text-lg sm:text-xl font-bold text-[#222831] mb-2 lg:mb-3">{step.title}</h3>
+                <p className="text-xs sm:text-sm lg:text-base text-[#31363F] leading-relaxed">{step.description}</p>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
