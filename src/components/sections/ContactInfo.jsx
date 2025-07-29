@@ -2,6 +2,7 @@ import React from 'react';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 import Card from '../ui/Card';
 import { teamMembers } from '../../data/team';
+import { COMPANY_INFO } from '../../utils/constants';
 
 const ContactInfo = () => {
   return (
@@ -16,21 +17,21 @@ const ContactInfo = () => {
               <Card className="text-center">
                 <Phone className="w-12 h-12 text-[#76ABAE] mx-auto mb-4" />
                 <h3 className="text-lg font-semibold mb-2">Call Us</h3>
-                <p className="text-[#31363F]">+918953839476</p>
+                <p className="text-[#31363F]">{COMPANY_INFO.phone}</p>
                 <p className="text-sm text-[#31363F]/70 mt-1">Mon-Fri 9AM-6PM</p>
               </Card>
               
               <Card className="text-center">
                 <Mail className="w-12 h-12 text-[#76ABAE] mx-auto mb-4" />
                 <h3 className="text-lg font-semibold mb-2">Email Us</h3>
-                <p className="text-[#31363F]">generativeAix@gmail.com</p>
+                <p className="text-[#31363F]">{COMPANY_INFO.email}</p>
                 <p className="text-sm text-[#31363F]/70 mt-1">We'll respond within 24hrs</p>
               </Card>
               
               <Card className="text-center">
                 <MapPin className="w-12 h-12 text-[#76ABAE] mx-auto mb-4" />
                 <h3 className="text-lg font-semibold mb-2">Visit Us</h3>
-                <p className="text-[#31363F]">New Delhi, India</p>
+                <p className="text-[#31363F]">{COMPANY_INFO.address}</p>
                 <p className="text-sm text-[#31363F]/70 mt-1">Schedule an appointment</p>
               </Card>
               

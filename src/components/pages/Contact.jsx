@@ -11,6 +11,7 @@ import {
   Clock,
   Globe
 } from 'lucide-react';
+import { COMPANY_INFO } from '../../utils/constants';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -61,14 +62,14 @@ const Contact = () => {
       icon: Phone,
       title: "Call Us",
       description: "Speak directly with our AI experts",
-      contact: "+918953839476",
+      contact: COMPANY_INFO.phone,
       action: "Call Now"
     },
     {
       icon: Mail,
       title: "Email Us", 
       description: "Send us your detailed requirements",
-      contact: "generativeaixtech@gmail.com",
+      contact: COMPANY_INFO.email,
       action: "Send Email"
     },
     {
@@ -82,7 +83,7 @@ const Contact = () => {
       icon: MapPin,
       title: "Visit Us",
       description: "Meet us at our office",
-      contact: "New Delhi, India",
+      contact: COMPANY_INFO.address,
       action: "Get Directions"
     }
   ];
@@ -264,15 +265,15 @@ const Contact = () => {
                 <div className="space-y-3">
                   <div className="flex items-center text-sm">
                     <Phone className="text-[#31363F] mr-2" size={16} />
-                    <span className="text-[#31363F]">+918953839476</span>
+                    <span className="text-[#31363F]">{COMPANY_INFO.phone}</span>
                   </div>
                   <div className="flex items-center text-sm">
                     <Mail className="text-[#31363F] mr-2" size={16} />
-                    <span className="text-[#31363F]">generativeAix@gmail.com</span>
+                    <span className="text-[#31363F]">{COMPANY_INFO.email}</span>
                   </div>
                   <div className="flex items-center text-sm">
                     <MapPin className="text-[#31363F] mr-2" size={16} />
-                    <span className="text-[#31363F]">New Delhi, India</span>
+                    <span className="text-[#31363F]">{COMPANY_INFO.address}</span>
                   </div>
                 </div>
               </Card>
