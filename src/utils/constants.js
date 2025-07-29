@@ -1,8 +1,8 @@
 export const COMPANY_INFO = {
   name: "GenerativeAix",
   phone: "+918953839476",
-  email: "generativeAix@gmail.com",
-  address: "New Delhi, India",
+  email: "generativeaixtech@gmail.com",
+  address: "Lucknow, India",
   founded: "2021",
   tagline: "Transform Your Business with Generative AI"
 };
