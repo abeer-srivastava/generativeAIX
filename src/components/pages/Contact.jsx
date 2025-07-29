@@ -68,7 +68,7 @@ const Contact = () => {
       icon: Mail,
       title: "Email Us", 
       description: "Send us your detailed requirements",
-      contact: "generativeAix@gmail.com",
+      contact: "generativeaixtech@gmail.com",
       action: "Send Email"
     },
     {

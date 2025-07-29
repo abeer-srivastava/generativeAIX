@@ -263,7 +263,7 @@ const Home = () => {
                   className="rounded-lg shadow-lg w-full"
                 />
 
-                <video src="" width="500" height="300"></video>
+                <video src="" width="10" height="100"></video>
               </div>
             </div>
             <div>
@@ -340,7 +340,7 @@ const Home = () => {
       </section>
       {/* genaiX/public/images/team/FAQ.png */}
       {/* FAQ Section */}
-      <section className="py-16 bg-[#EEEEEE]">
+      <section className="py-8 bg-[#EEEEEE]">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12">
             <div>
