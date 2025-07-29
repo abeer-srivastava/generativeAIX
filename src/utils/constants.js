@@ -8,10 +8,10 @@ export const COMPANY_INFO = {
 };
 
 export const SOCIAL_LINKS = {
-  facebook: "https://facebook.com/generativeaix",
-  twitter: "https://twitter.com/generativeaix", 
-  instagram: "https://instagram.com/generativeaix",
-  linkedin: "https://linkedin.com/company/generativeaix"
+  facebook: "https://www.facebook.com/profile.php?id=61578882025775",
+  twitter: "https://x.com/Generative_Aix", 
+  instagram: "https://www.instagram.com/generativeaix?igsh=MnhxM2ZjdXl4c3N0",
+  linkedin: "https://www.linkedin.com/in/generative-aix-363ba1376/"
 };
 
 export const NAVIGATION_ITEMS = [
