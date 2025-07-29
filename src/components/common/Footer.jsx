@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, Mail, MapPin, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin } from 'lucide-react';
 
 const Footer = ({ setCurrentPage }) => {
   const quickLinks = [
@@ -29,7 +29,9 @@ const Footer = ({ setCurrentPage }) => {
                 <Facebook size={14} className="sm:w-4 sm:h-4" />
               </a>
               <a target="#" href="https://x.com/Generative_Aix" className="hover:text-[#222831] transition-colors">
-                <Twitter size={14} className="sm:w-4 sm:h-4" />
+                <svg className="w-4 h-4 sm:w-4 sm:h-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
               </a>
               <a target="#" href="https://www.instagram.com/generativeaix?igsh=MnhxM2ZjdXl4c3N0" className="hover:text-[#222831] transition-colors">
                 <Instagram size={14} className="sm:w-4 sm:h-4" />
@@ -78,7 +80,7 @@ const Footer = ({ setCurrentPage }) => {
               </div>
               <div className="flex items-center space-x-2">
                 <Mail size={16} />
-                <span className="text-[#EEEEEE]/70">generativeAix@gmail.com</span>
+                <span className="text-[#EEEEEE]/70">generativeaixtech@gmail.com</span>
               </div>
               <div className="flex items-center space-x-2">
                 <MapPin size={16} />
@@ -90,7 +92,7 @@ const Footer = ({ setCurrentPage }) => {
 
         <div className="border-t border-[#31363F] mt-8 pt-8 text-center">
           <p className="text-[#EEEEEE]/70">
-            © 2024 GenerativeAix. All rights reserved. | Designed & Developed by GenerativeAix Team
+            © 2025 GenerativeAix. All rights reserved. | Designed & Developed by Techiguru.in
           </p>
         </div>
       </div>

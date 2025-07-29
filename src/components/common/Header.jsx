@@ -24,7 +24,7 @@ const Header = ({ currentPage, setCurrentPage }) => {
               <div className="flex items-center space-x-1">
                 <Mail size={14} className="sm:w-4 sm:h-4" />
                 <span className="text-xs sm:text-sm">
-                  <a target="#" href="generativeAix@gmail.com">generativeAix@gmail.com</a>
+                  <a target="#" href="mailto:generativeaixtech@gmail.com">generativeaixtech@gmail.com</a>
                 </span>
               </div>
             </div>
@@ -33,7 +33,9 @@ const Header = ({ currentPage, setCurrentPage }) => {
                 <Facebook size={14} className="sm:w-4 sm:h-4" />
               </a>
               <a target="#" href="https://x.com/Generative_Aix" className="hover:text-[#222831] transition-colors">
-                <Twitter size={14} className="sm:w-4 sm:h-4" />
+                <svg className="w-4 h-4 sm:w-4 sm:h-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
               </a>
               <a target="#" href="https://www.instagram.com/generativeaix?igsh=MnhxM2ZjdXl4c3N0" className="hover:text-[#222831] transition-colors">
                 <Instagram size={14} className="sm:w-4 sm:h-4" />
@@ -50,14 +52,15 @@ const Header = ({ currentPage, setCurrentPage }) => {
       <div className="container mx-auto px-4 py-3 sm:py-4">
         <div className="flex justify-between items-center">
           {/* Logo and Brand */}
+          {/* mobile-header-logo w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 xl:w-24 xl:h-24 object-contain rounded-lg bg-[#EEEEEE] */}
           <div className="flex items-center space-x-2 sm:space-x-3 lg:space-x-4">
             <img
               src="/images/icons/finalLogo-removebg-preview.png"
               alt="Generative Aix Logo"
-              className="mobile-header-logo w-10 h-10 sm:w-12 sm:h-12 lg:w-16 lg:h-16 xl:w-20 xl:h-20 object-contain rounded-lg bg-[#EEEEEE]"
+              className="h-auto max-h-16 w-auto object-contain rounded-lg bg-[#EEEEEE]"
             />
             <div className="hidden sm:block">
-              <h1 className="text-base sm:text-lg lg:text-xl xl:text-2xl font-bold text-[#76ABAE]">GenerativeAix</h1>
+              <h1 className="text-base sm:text-lg lg:text-xl xl:text-2xl font-bold text-[#76ABAE]"></h1>
             </div>
           </div>
 
