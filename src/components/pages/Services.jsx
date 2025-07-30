@@ -46,7 +46,7 @@ const Services = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="py-8 sm:py-12 lg:py-20 bg-gradient-to-br from-[#EEEEEE] to-[#76ABAE]/20">
+      <section className="py-8 sm:py-12 lg:py-20 bg-gradient-to-br from-[#76ABAE] to-[#76ABAE]/20">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#222831] mb-4 lg:mb-6">Our AI Services</h1>

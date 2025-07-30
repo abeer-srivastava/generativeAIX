@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const Button = ({ 
@@ -10,22 +9,37 @@ const Button = ({
   disabled = false,
   type = 'button'
 }) => {
-  const baseClasses = 'inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2';
+  // --- Base classes for all buttons ---
+  // Added transform and hover:-translate-y-0.5 for a subtle "lift" effect on hover
+  const baseClasses = 'inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 shadow-md hover:shadow-lg transform hover:-translate-y-0.5';
   
+  // --- Variants with refined styles ---
   const variants = {
-    primary: 'bg-[#76ABAE] text-[#EEEEEE] hover:bg-[#31363F] focus:ring-[#76ABAE]',
-    secondary: 'bg-[#31363F] text-[#EEEEEE] hover:bg-[#222831] focus:ring-[#31363F]',
-    outline: 'border-2 border-[#76ABAE] text-[#76ABAE] hover:bg-[#76ABAE] hover:text-[#EEEEEE] focus:ring-[#76ABAE]',
-    ghost: 'text-[#76ABAE] hover:bg-[#EEEEEE] focus:ring-[#76ABAE]'
+    // Primary action button
+    primary: 'bg-[#76ABAE] text-white hover:bg-[#66999B] focus:ring-[#76ABAE]',
+    
+    // Secondary action button
+    secondary: 'bg-[#31363F] text-white hover:bg-[#222831] focus:ring-[#31363F]',
+    
+    // Outlined button, more subtle
+    outline: 'border-2 border-[#76ABAE] text-[#76ABAE] bg-transparent hover:bg-[#76ABAE] hover:text-white focus:ring-[#76ABAE]',
+    
+    // A button with no background or border
+    ghost: 'text-[#76ABAE] bg-transparent hover:bg-teal-50 focus:ring-[#76ABAE] shadow-none',
+
+    // NEW: Destructive variant for delete/cancel actions
+    destructive: 'bg-red-500 text-white hover:bg-red-600 focus:ring-red-500',
   };
   
+  // --- Sizing options ---
   const sizes = {
-    sm: 'px-3 py-2 text-sm sm:px-4 sm:py-2 sm:text-sm',
-    md: 'px-4 py-2 text-sm sm:px-6 sm:py-3 sm:text-base',
-    lg: 'px-6 py-3 text-base sm:px-8 sm:py-4 sm:text-lg'
+    sm: 'px-4 py-2 text-sm',
+    md: 'px-6 py-3 text-base',
+    lg: 'px-8 py-4 text-lg'
   };
   
-  const disabledClasses = disabled ? 'opacity-50 cursor-not-allowed' : '';
+  // --- Classes for disabled state ---
+  const disabledClasses = disabled ? 'opacity-50 cursor-not-allowed hover:shadow-md hover:-translate-y-0' : '';
   
   return (
     <button

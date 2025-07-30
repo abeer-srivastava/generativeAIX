@@ -1,151 +1,152 @@
 import React, { useState } from 'react';
-import { SquareMenu } from 'lucide-react'; // Add this import
+// Import icons for a richer UI
+import { ArrowRight, Bot, FileText, Languages, ImageIcon, Briefcase, GraduationCap, PenTool, Code } from 'lucide-react';
 
-const MODULES = [
-	{
-		title: 'Auto Blog',
-		subtitle: 'AI-powered content writing',
-		image: '/images/portfolio/blog.jpg',
-	},
-	{
-		title: 'Resume Builder',
-		subtitle: 'Professional CVs in seconds',
-		image: '/images/portfolio/resume.jpg',
-	},
-	{
-		title: 'Language Translator',
-		subtitle: 'Real-time translation',
-		image: '/images/portfolio/translator.jpg',
-	},
-	{
-		title: 'Document Converter',
-		subtitle: 'PDF, DOCX, HTML & more',
-		image: '/images/portfolio/converter.jpg',
-	},
-	{
-		title: 'Job Scrapping',
-		subtitle: 'Find jobs automatically',
-		image: '/images/portfolio/jobs.jpg',
-	},
-	{
-		title: 'Learning Tutorials',
-		subtitle: 'Hands-on AI learning',
-		image: '/images/portfolio/tutorials.jpg',
-	},
-	{
-		title: 'Text Generation',
-		subtitle: 'Contextual AI writing',
-		image: '/images/portfolio/textgen.jpg',
-	},
-	{
-		title: 'Create GPT UI',
-		subtitle: 'Custom GPT interfaces',
-		image: '/images/portfolio/gptui.jpg',
-	},
+// --- DATA: Now with categories for smart filtering ---
+const portfolioItems = [
+    {
+        title: 'Auto Blog',
+        subtitle: 'AI-powered content writing',
+        image: '/images/portfolio/Autoblog.jpg',
+        category: 'AI',
+        icon: <PenTool size={48} />
+    },
+    {
+        title: 'Resume Builder',
+        subtitle: 'Professional CVs in seconds',
+        image: '/images/portfolio/Resume_builder.jpg',
+        category: 'Tools',
+        icon: <FileText size={48} />
+    },
+    {
+        title: 'Language Translator',
+        subtitle: 'Real-time translation',
+        image: '/images/portfolio/Language_translator.jpg',
+        category: 'Tools',
+        icon: <Languages size={48} />
+    },
+    {
+        title: 'Document Converter',
+        subtitle: 'PDF, DOCX, HTML & more',
+        image: '/images/portfolio/document_converter.jpg',
+        category: 'Tools',
+        icon: <Briefcase size={48} />
+    },
+    {
+        title: 'Job Scrapping',
+        subtitle: 'Find jobs automatically',
+        image: '/images/portfolio/Job_scrapping.jpg',
+        category: 'AI',
+        icon: <Bot size={48} />
+    },
+    {
+        title: 'Learning Tutorials',
+        subtitle: 'Hands-on AI learning',
+        image: '/images/portfolio/Learning_Tutorial.jpg',
+        category: 'Other',
+        icon: <GraduationCap size={48} />
+    },
+    {
+        title: 'Text Generation',
+        subtitle: 'Contextual AI writing',
+        image: '/images/portfolio/Text_generator.jpg',
+        category: 'AI',
+        icon: <PenTool size={48} />
+    },
+    {
+        title: 'Create GPT UI',
+        subtitle: 'Custom GPT interfaces',
+        image: '/images/portfolio/GPT_UI.jpg',
+        category: 'AI',
+        icon: <Code size={48} />
+    },
 ];
 
-const FILTERS = ['All', 'Stepper', 'Tools', 'AI', 'Other'];
+const FILTERS = ['All', 'AI', 'Tools', 'Other'];
+
+// --- Sub-Components for a cleaner structure ---
+
+const PortfolioCard = ({ item }) => (
+    <div className="group relative rounded-xl overflow-hidden shadow-lg">
+        <img src={item.image} alt={item.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
+        <div className="absolute inset-0 p-6 flex flex-col justify-end">
+            <h3 className="text-2xl font-bold text-white mb-1">{item.title}</h3>
+            <p className="text-white/80">{item.subtitle}</p>
+            <button className="flex items-center text-white font-semibold mt-4 opacity-0 group-hover:opacity-100 transform -translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+                View Project <ArrowRight size={20} className="ml-2" />
+            </button>
+        </div>
+    </div>
+);
+
+
+// --- Main Portfolio Page Component ---
 
 const Portfolio = () => {
-	const [active, setActive] = useState('All');
+    const [activeFilter, setActiveFilter] = useState('All');
 
-	// For demo, all modules are shown for "All"
-	const filtered =
-		active === 'All'
-			? MODULES
-			: MODULES.filter((m) =>
-					m.subtitle.toLowerCase().includes(active.toLowerCase())
-			  );
+    const filteredItems = activeFilter === 'All'
+        ? portfolioItems
+        : portfolioItems.filter(item => item.category === activeFilter);
 
-	return (
-		<div>
-			{/* Hero */}
-			<section className="bg-gradient-to-r from-[#76ABAE] to-[#31363F] py-14">
-				<div className="container mx-auto px-4 text-center">
-					<div className="text-[#EEEEEE] text-sm mb-2 opacity-80">
-						Home &gt;{' '}
-						<span className="font-semibold">Portfolio</span>
-					</div>
-					<h1 className="text-4xl md:text-5xl font-bold tracking-wide mb-2">
-						PORTFOLIO
-					</h1>
-				</div>
-			</section>
+    return (
+        <div>
+            {/* Hero Section */}
+            <section className="py-20 text-center bg-gray-50">
+                <div className="container mx-auto px-4">
+                    <h1 className="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#76ABAE] to-[#222831]">
+                        Our Portfolio
+                    </h1>
+                    <p className="text-lg text-gray-600 mt-4 max-w-3xl mx-auto">
+                        A showcase of our innovative AI-powered solutions. Explore the tools we've built to drive efficiency and creativity.
+                    </p>
+                </div>
+            </section>
 
-			{/* Modules */}
-			<section className="py-16 bg-[#EEEEEE]">
-				<div className="container mx-auto px-4">
-					<div className="text-center mb-8">
-						<h2 className="text-2xl md:text-3xl font-bold mb-2">
-							OUR MODULES
-						</h2>
-						<p className="text-[#31363F] max-w-xl mx-auto">
-							This section showcases the main modules of the GenerativeAix
-							platform. Hundreds of powerful productivity and conversion tools.
-						</p>
-					</div>
-					{/* Filters */}
-					<div className="flex justify-center gap-3 mb-8 flex-wrap">
-						{FILTERS.map((f) => (
-							<button
-								key={f}
-								className={`px-5 py-2 rounded-full border transition ${
-									active === f
-										? 'bg-[#76ABAE] text-[#EEEEEE]'
-										: 'bg-[#EEEEEE] text-[#76ABAE] border-[#76ABAE] hover:bg-[#76ABAE]/10'
-								}`}
-								onClick={() => setActive(f)}
-							>
-								{f}
-							</button>
-						))}
-					</div>
-					{/* Grid */}
-					<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mb-8">
-						{filtered.map((mod, i) => (
-							<div
-								key={i}
-								className="bg-[#EEEEEE] rounded-xl shadow-md hover:shadow-xl transition overflow-hidden flex flex-col items-center justify-between py-6 px-4 min-h-[220px] border border-[#76ABAE]/20"
-							>
-								<div className="mb-4 flex">
-									<SquareMenu  size={48} className="text-[#222831]" />
-								</div>
-								<div className="w-full text-center mt-auto">
-									<h3 className="font-bold text-lg text-[#222831] mb-1">
-										{mod.title}
-									</h3>
-									<p className="text-[#76ABAE] font-medium text-sm">
-										{mod.subtitle}
-									</p>
-								</div>
-							</div>
-						))}
-					</div>
-					{/* Load More */}
-					<div className="flex justify-center">
-						<button className="bg-[#76ABAE] text-[#EEEEEE] px-8 py-2 rounded-lg font-semibold hover:bg-[#31363F] transition">
-							LOAD PAGE
-						</button>
-					</div>
-				</div>
-			</section>
+            {/* Portfolio Grid Section */}
+            <section className="py-20 bg-white">
+                <div className="container mx-auto px-4">
+                    {/* Filters */}
+                    <div className="flex justify-center gap-3 mb-12 flex-wrap">
+                        {FILTERS.map((filter) => (
+                            <button
+                                key={filter}
+                                onClick={() => setActiveFilter(filter)}
+                                className={`px-5 py-2 rounded-full font-medium transition-all duration-300 ${
+                                    activeFilter === filter
+                                        ? 'bg-[#76ABAE] text-white shadow-md'
+                                        : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                                }`}
+                            >
+                                {filter}
+                            </button>
+                        ))}
+                    </div>
 
-			{/* CTA */}
-			<section className="bg-gradient-to-r from-[#31363F] to-[#76ABAE] py-12">
-				<div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between">
-					<div className="text-[#EEEEEE] text-2xl font-bold mb-4 md:mb-0">
-						START AUTOMATING WITH GENERATIVEAIX
-					</div>
-					<button className="bg-[#EEEEEE] text-[#76ABAE] px-6 py-2 rounded-lg font-semibold hover:bg-[#EEEEEE]/90 transition">
-						CONTACT US
-					</button>
-				</div>
-			</section>
+                    {/* Grid */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                        {filteredItems.map((item) => (
+                            <PortfolioCard key={item.title} item={item} />
+                        ))}
+                    </div>
+                </div>
+            </section>
 
-			{/* Footer */}
-			
-		</div>
-	);
+            {/* CTA Section */}
+            <section className="py-20 bg-gradient-to-r from-[#76ABAE] to-[#31363F]">
+                <div className="container mx-auto px-4 text-center text-white">
+                    <h2 className="text-3xl md:text-4xl font-bold mb-4">Have a Project in Mind?</h2>
+                    <p className="text-white/80 mb-8 max-w-2xl mx-auto">
+                        Let's collaborate to build the next generation of AI tools for your business.
+                    </p>
+                    <button className="bg-white text-[#222831] px-8 py-3 rounded-lg font-semibold hover:bg-gray-200 transition duration-300 transform hover:scale-105">
+                        Contact Us
+                    </button>
+                </div>
+            </section>
+        </div>
+    );
 };
 
 export default Portfolio;

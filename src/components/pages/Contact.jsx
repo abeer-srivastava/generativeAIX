@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+<<<<<<< Updated upstream
 import ContactInfo from '../sections/ContactInfo';
 import Card from '../ui/Card';
 import Button from '../ui/Button';
@@ -12,51 +13,43 @@ import {
   Globe
 } from 'lucide-react';
 import { COMPANY_INFO } from '../../utils/constants';
+=======
+// Added more icons for the new sections
+import { Phone, Mail, MapPin, Send, Linkedin, Twitter, Calendar, QrCode } from 'lucide-react';
+
+// You would get this from your social media profiles
+const SOCIAL_LINKS = {
+    linkedin: '#',
+    twitter: '#'
+};
+>>>>>>> Stashed changes
 
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    phone: '',
-    company: '',
     service: '',
     message: ''
   });
 
   const serviceOptions = [
-    'Auto Blog Generator',
-    'Resume Builder', 
-    'Language Translator',
-    'Image Generator',
-    'Chat Bot',
-    'Code Generator',
-    'Data Analyzer',
-    'Process Automator',
-    'Custom AI Solution'
+    'Auto Blog Generator', 'Resume Builder', 'Language Translator', 'Image Generator',
+    'Chat Bot', 'Code Generator', 'Custom AI Solution', 'Other'
   ];
 
   const handleInputChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission
     console.log('Form submitted:', formData);
     alert('Thank you for your message! We will get back to you soon.');
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      company: '',
-      service: '',
-      message: ''
-    });
+    // Reset form
+    setFormData({ name: '', email: '', service: '', message: '' });
   };
 
+<<<<<<< Updated upstream
   const contactMethods = [
     {
       icon: Phone,
@@ -94,147 +87,73 @@ const Contact = () => {
     { day: "Sunday", hours: "Closed" }
   ];
 
+=======
+>>>>>>> Stashed changes
   return (
-    <div>
+    <div className="bg-gray-50">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-[#EEEEEE] to-[#76ABAE]/20">
+      <section className="py-20 text-center">
         <div className="container mx-auto px-4">
-          <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-5xl font-bold text-[#222831] mb-6">Get In Touch</h1>
-            <p className="text-xl text-[#31363F] mb-8 leading-relaxed">
-              Ready to transform your business with AI? We're here to help you every step of the way. 
-              Contact our team of experts and let's discuss your AI needs.
-            </p>
-          </div>
+          <h1 className="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#76ABAE] to-[#222831]">
+            Contact Us
+          </h1>
+          <p className="text-lg text-gray-600 mt-4 max-w-3xl mx-auto">
+            Have a project in mind or just want to learn more? We'd love to hear from you.
+          </p>
         </div>
       </section>
 
-      {/* Contact Methods */}
-      <section className="py-16 bg-[#EEEEEE]">
+      {/* Main Contact Section */}
+      <section className="pb-20">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-            {contactMethods.map((method, index) => {
-              const IconComponent = method.icon;
-              return (
-                <Card key={index} className="text-center group hover:shadow-lg transition-shadow duration-300">
-                  <div className="w-16 h-16 bg-gradient-to-r from-[#76ABAE] to-[#31363F] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <IconComponent className="text-[#EEEEEE]" size={24} />
+          <div className="max-w-6xl mx-auto shadow-2xl rounded-xl overflow-hidden bg-white">
+            <div className="grid lg:grid-cols-3">
+              
+              <div className="lg:col-span-1 bg-gradient-to-b from-[#31363F] to-[#222831] p-8 text-white">
+                <h2 className="text-3xl font-bold mb-4">Contact Information</h2>
+                <p className="text-gray-300 mb-8">
+                  Fill out the form, and our team will get back to you within 24 hours.
+                </p>
+                <div className="space-y-6">
+                  <a href="tel:+918953839476" className="flex items-center space-x-3 group">
+                    <Phone className="text-[#76ABAE] group-hover:animate-pulse" size={20} />
+                    <span className="text-gray-300 group-hover:text-white transition-colors">+91 89538 39476</span>
+                  </a>
+                  <a href="mailto:generativeaixtech@gmail.com" className="flex items-center space-x-3 group">
+                    <Mail className="text-[#76ABAE] group-hover:animate-pulse" size={20} />
+                    <span className="text-gray-300 group-hover:text-white transition-colors">generativeaixtech@gmail.com</span>
+                  </a>
+                  <div className="flex items-start space-x-3">
+                    <MapPin className="text-[#76ABAE] mt-1" size={20} />
+                    <span className="text-gray-300">Lucknow, India</span>
                   </div>
-                  <h3 className="text-xl font-semibold text-[#222831] mb-2">{method.title}</h3>
-                  <p className="text-[#31363F] text-sm mb-3">{method.description}</p>
-                  <p className="text-[#76ABAE] font-medium mb-4">{method.contact}</p>
-                  <Button variant="outline" size="sm" className="w-full">
-                    {method.action}
-                  </Button>
-                </Card>
-              );
-            })}
-          </div>
+                </div>
+              </div>
 
-          {/* Contact Form & Info */}
-          <div className="grid lg:grid-cols-3 gap-12">
-            {/* Contact Form */}
-            <div className="lg:col-span-2">
-              <Card className="p-8">
-                <h2 className="text-3xl font-bold text-[#222831] mb-6">Send Us a Message</h2>
+              <div className="lg:col-span-2 p-8">
+                <h2 className="text-3xl font-bold text-gray-800 mb-6">Send Us a Message</h2>
                 <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div>
-                      <label className="block text-sm font-medium text-[#222831] mb-2">
-                        Full Name *
-                      </label>
-                      <input
-                        type="text"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleInputChange}
-                        required
-                        className="w-full px-4 py-3 border border-[#31363F] rounded-lg focus:ring-2 focus:ring-[#76ABAE] focus:border-transparent bg-[#EEEEEE] text-[#222831]"
-                        placeholder="Your full name"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium text-[#222831] mb-2">
-                        Email Address *
-                      </label>
-                      <input
-                        type="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleInputChange}
-                        required
-                        className="w-full px-4 py-3 border border-[#31363F] rounded-lg focus:ring-2 focus:ring-[#76ABAE] focus:border-transparent bg-[#EEEEEE] text-[#222831]"
-                        placeholder="your@email.com"
-                      />
-                    </div>
+                  <div className="grid sm:grid-cols-2 gap-6">
+                    <input type="text" name="name" value={formData.name} onChange={handleInputChange} required placeholder="Full Name *" className="w-full px-4 py-3 border-b-2 border-gray-200 focus:outline-none focus:border-[#76ABAE] transition-colors" />
+                    <input type="email" name="email" value={formData.email} onChange={handleInputChange} required placeholder="Email Address *" className="w-full px-4 py-3 border-b-2 border-gray-200 focus:outline-none focus:border-[#76ABAE] transition-colors" />
                   </div>
-
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div>
-                      <label className="block text-sm font-medium text-[#222831] mb-2">
-                        Phone Number
-                      </label>
-                      <input
-                        type="tel"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 border border-[#31363F] rounded-lg focus:ring-2 focus:ring-[#76ABAE] focus:border-transparent bg-[#EEEEEE] text-[#222831]"
-                        placeholder="+1 (555) 123-4567"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium text-[#222831] mb-2">
-                        Company Name
-                      </label>
-                      <input
-                        type="text"
-                        name="company"
-                        value={formData.company}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 border border-[#31363F] rounded-lg focus:ring-2 focus:ring-[#76ABAE] focus:border-transparent bg-[#EEEEEE] text-[#222831]"
-                        placeholder="Your company"
-                      />
-                    </div>
-                  </div>
-
                   <div>
-                    <label className="block text-sm font-medium text-[#222831] mb-2">
-                      Service of Interest
-                    </label>
-                    <select
-                      name="service"
-                      value={formData.service}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-[#31363F] rounded-lg focus:ring-2 focus:ring-[#76ABAE] focus:border-transparent bg-[#EEEEEE] text-[#222831]"
-                    >
-                      <option value="">Select a service</option>
-                      {serviceOptions.map((service, index) => (
-                        <option key={index} value={service}>{service}</option>
-                      ))}
+                    <select name="service" value={formData.service} onChange={handleInputChange} className="w-full px-4 py-3 border-b-2 border-gray-200 focus:outline-none focus:border-[#76ABAE] transition-colors bg-white">
+                      <option value="">Select a service of interest</option>
+                      {serviceOptions.map((service) => <option key={service} value={service}>{service}</option>)}
                     </select>
                   </div>
-
                   <div>
-                    <label className="block text-sm font-medium text-[#222831] mb-2">
-                      Message *
-                    </label>
-                    <textarea
-                      name="message"
-                      value={formData.message}
-                      onChange={handleInputChange}
-                      required
-                      rows={5}
-                      className="w-full px-4 py-3 border border-[#31363F] rounded-lg focus:ring-2 focus:ring-[#76ABAE] focus:border-transparent bg-[#EEEEEE] text-[#222831]"
-                      placeholder="Tell us about your project requirements..."
-                    ></textarea>
+                    <textarea name="message" value={formData.message} onChange={handleInputChange} required rows={5} placeholder="Your Message *" className="w-full px-4 py-3 border-b-2 border-gray-200 focus:outline-none focus:border-[#76ABAE] transition-colors resize-none"></textarea>
                   </div>
-
-                  <Button type="submit" size="lg" className="w-full">
-                    <Send className="mr-2" size={20} />
-                    Send Message
-                  </Button>
+                  <div>
+                    <button type="submit" className="w-full bg-[#76ABAE] text-white font-semibold py-3 px-6 rounded-lg hover:bg-[#31363F] transition duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1 flex items-center justify-center">
+                      <Send className="mr-2" size={20} />
+                      Send Message
+                    </button>
+                  </div>
                 </form>
+<<<<<<< Updated upstream
               </Card>
             </div>
 
@@ -288,66 +207,79 @@ const Contact = () => {
                   Call Emergency Line
                 </Button>
               </Card>
+=======
+              </div>
+>>>>>>> Stashed changes
             </div>
           </div>
         </div>
       </section>
-
-      {/* Contact Info Section */}
-      <ContactInfo />
-
-      {/* FAQ Section */}
-      <section className="py-16 bg-[#EEEEEE]">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-[#222831] mb-4">Frequently Asked Questions</h2>
-            <p className="text-xl text-[#31363F]">Quick answers to common questions</p>
+      
+      {/* --- NEW: Schedule a Meeting Section --- */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4 text-center">
+          <Calendar size={48} className="mx-auto text-[#76ABAE] mb-4" />
+          <h2 className="text-3xl md:text-4xl font-bold text-[#222831]">Schedule a Meeting</h2>
+          <p className="text-lg text-gray-600 mt-4 max-w-3xl mx-auto mb-8">
+            Eliminate the back-and-forth. Book a time that works for you directly on our calendar.
+          </p>
+          {/* Calendly Widget Placeholder */}
+          <div className="max-w-4xl mx-auto h-96 bg-gray-200 rounded-lg flex items-center justify-center text-gray-500">
+            <p>Your Calendly or other scheduling widget embed goes here.</p>
           </div>
-          
-          <div className="max-w-4xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-8">
-              <Card>
-                <h3 className="text-lg font-semibold text-[#222831] mb-2">
-                  How quickly can you deliver an AI solution?
-                </h3>
-                <p className="text-[#31363F] text-sm">
-                  Depending on complexity, most projects are completed within 2-8 weeks. 
-                  We provide detailed timelines during our initial consultation.
-                </p>
-              </Card>
-              
-              <Card>
-                <h3 className="text-lg font-semibold text-[#222831] mb-2">
-                  Do you provide ongoing support?
-                </h3>
-                <p className="text-[#31363F] text-sm">
-                  Yes, we offer 24/7 support, regular updates, and maintenance for all 
-                  our AI solutions to ensure optimal performance.
-                </p>
-              </Card>
-              
-              <Card>
-                <h3 className="text-lg font-semibold text-[#222831] mb-2">
-                  Can you integrate with existing systems?
-                </h3>
-                <p className="text-[#31363F] text-sm">
-                  Absolutely! Our AI solutions are designed to seamlessly integrate 
-                  with your current infrastructure and workflows.
-                </p>
-              </Card>
-              
-              <Card>
-                <h3 className="text-lg font-semibold text-[#222831] mb-2">
-                  What industries do you serve?
-                </h3>
-                <p className="text-[#31363F] text-sm">
-                  We work across all industries including healthcare, finance, 
-                  e-commerce, education, and manufacturing.
-                </p>
-              </Card>
+        </div>
+      </section>
+
+      {/* --- NEW: Connect With Us Section --- */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Social Links */}
+            <div className="text-center lg:text-left">
+              <h2 className="text-3xl font-bold text-gray-800">Connect With Us</h2>
+              <p className="text-gray-600 mt-2 mb-6">Follow us on social media for the latest AI news and company updates.</p>
+              <div className="flex justify-center lg:justify-start space-x-4">
+                  <a href={SOCIAL_LINKS.twitter} target="_blank" rel="noopener noreferrer" className="bg-gray-100 p-4 rounded-full text-gray-600 hover:bg-[#76ABAE] hover:text-white transition-colors duration-300">
+                      <Twitter size={24} />
+                  </a>
+                  <a href={SOCIAL_LINKS.linkedin} target="_blank" rel="noopener noreferrer" className="bg-gray-100 p-4 rounded-full text-gray-600 hover:bg-[#76ABAE] hover:text-white transition-colors duration-300">
+                      <Linkedin size={24} />
+                  </a>
+              </div>
+            </div>
+            {/* QR Code */}
+            <div className="flex flex-col items-center">
+                <QrCode size={48} className="text-[#76ABAE] mb-4"/>
+                <h3 className="text-2xl font-bold text-gray-800">Save Our Contact</h3>
+                <p className="text-gray-600 mt-2 mb-4">Scan with your phone to add us to your contacts.</p>
+                <div className="p-2 border rounded-lg bg-white">
+                    {/* Replace with your actual vCard QR Code Image */}
+                    <img src="/images/contact-qrcode.png" alt="vCard QR Code" className="w-32 h-32" />
+                </div>
             </div>
           </div>
         </div>
+      </section>
+       {/* Map Section */}
+      <section className="pb-20">
+          <div className="container mx-auto px-4">
+              <div className="text-center mb-8">
+                <h2 className="text-3xl font-bold text-gray-800">Our Location</h2>
+                <p className="text-gray-600 mt-2">We are located in the heart of Lucknow's IT hub, Gomti Nagar.</p>
+              </div>
+              <div className="w-full h-96 rounded-lg overflow-hidden shadow-xl">
+                  {/* To get your own map: 1. Go to Google Maps. 2. Find your location. 3. Click Share -> Embed a map. 4. Copy the HTML and paste the 'src' link below. */}
+                  <iframe 
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d227821.9337575531!2d80.80242484438366!3d26.84862217122398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399bfd991f32b16b%3A0x93ccba8909978be7!2sLucknow%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1692215320577!5m2!1sen!2sin" 
+                      width="100%" 
+                      height="100%" 
+                      style={{ border: 0 }} 
+                      allowFullScreen="" 
+                      loading="lazy" 
+                      referrerPolicy="no-referrer-when-downgrade">
+                  </iframe>
+              </div>
+          </div>
       </section>
     </div>
   );

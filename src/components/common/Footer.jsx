@@ -1,8 +1,9 @@
 import React from 'react';
 import { COMPANY_INFO, SOCIAL_LINKS } from '../../utils/constants';
-import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin } from 'lucide-react';
+// Make sure to import the 'X' icon for Twitter/X
+import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin, X, ArrowRight } from 'lucide-react';
 
-const Footer = ({ setCurrentPage }) => {
+const PerfectFooter = ({ setCurrentPage }) => {
   const quickLinks = [
     { id: 'home', label: 'Home' },
     { id: 'about', label: 'About Us' },
@@ -10,95 +11,139 @@ const Footer = ({ setCurrentPage }) => {
     { id: 'contact', label: 'Contact' }
   ];
 
+  const servicesLinks = [
+    'Auto Blog Generator',
+    'Resume Builder',
+    'Language Translator',
+    'Image Generator'
+  ];
+
   return (
-    <footer className="bg-[#222831] text-[#EEEEEE] py-12">
-      <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-4 gap-8">
-          {/* Company Info */}
+    <footer className="bg-[#222831] text-white">
+      <div className="container mx-auto px-4 pt-16 pb-8">
+        {/* Top Section: Newsletter and Company Info */}
+        <div className="grid lg:grid-cols-2 gap-12 mb-12 border-b border-gray-700 pb-12">
+          {/* Company Info & Socials */}
           <div>
             <div className="flex items-center space-x-3 mb-4">
               <div className="w-10 h-10 bg-gradient-to-r from-[#76ABAE] to-[#31363F] rounded-lg flex items-center justify-center">
-                <span className="text-[#EEEEEE] font-bold">GA</span>
+                 <span className="text-white font-bold">GA</span>
               </div>
-              <h3 className="text-xl font-bold">{COMPANY_INFO.name}</h3>
+              <h3 className="text-2xl font-bold">{COMPANY_INFO.name}</h3>
             </div>
-            <p className="text-[#EEEEEE]/70 mb-4">
+            <p className="text-gray-400 mb-6 max-w-sm">
               Leading AI solutions provider, transforming businesses with cutting-edge artificial intelligence technologies.
             </p>
-            <div className="flex items-center space-x-2 sm:space-x-3 mobile-social-icons">
-              <a target="#" href={SOCIAL_LINKS.facebook} className="hover:text-[#222831] transition-colors">
-                <Facebook size={14} className="sm:w-4 sm:h-4" />
+            {/* --- ERROR-PROOF ICONS --- */}
+            <div className="flex space-x-4">
+              <a
+                href={SOCIAL_LINKS.facebook}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white bg-gray-700/50 hover:bg-gray-700 p-2 rounded-full transition-all duration-300"
+              >
+                <Facebook size={20} />
               </a>
-              <a target="#" href={SOCIAL_LINKS.twitter} className="hover:text-[#222831] transition-colors">
-                <svg className="w-4 h-4 sm:w-4 sm:h-4" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                </svg>
+              <a
+                href={SOCIAL_LINKS.twitter}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white bg-gray-700/50 hover:bg-gray-700 p-2 rounded-full transition-all duration-300"
+              >
+                <X size={20} />
               </a>
-              <a target="#" href={SOCIAL_LINKS.instagram} className="hover:text-[#222831] transition-colors">
-                <Instagram size={14} className="sm:w-4 sm:h-4" />
+              <a
+                href={SOCIAL_LINKS.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white bg-gray-700/50 hover:bg-gray-700 p-2 rounded-full transition-all duration-300"
+              >
+                <Instagram size={20} />
               </a>
-              <a target="#" href={SOCIAL_LINKS.linkedin} className="hover:text-[#222831] transition-colors">
-                <Linkedin size={14} className="sm:w-4 sm:h-4" />
+              <a
+                href={SOCIAL_LINKS.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white bg-gray-700/50 hover:bg-gray-700 p-2 rounded-full transition-all duration-300"
+              >
+                <Linkedin size={20} />
               </a>
             </div>
           </div>
-
-          {/* Quick Links */}
+          
+          {/* Newsletter Signup */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
-            <ul className="space-y-2">
-              {quickLinks.map((link) => (
-                <li key={link.id}>
-                  <button
-                    onClick={() => setCurrentPage(link.id)}
-                    className="text-[#EEEEEE]/70 hover:text-[#EEEEEE] transition-colors cursor-pointer"
-                  >
-                    {link.label}
-                  </button>
-                </li>
-              ))}
-            </ul>
+            <h4 className="text-xl font-semibold mb-4">Join Our Newsletter</h4>
+            <p className="text-gray-400 mb-4">Get the latest trends in AI and our exclusive deals directly in your inbox.</p>
+            <form className="flex items-center gap-2 mt-4" onSubmit={(e) => e.preventDefault()}>
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="w-full bg-gray-700/50 text-white placeholder-gray-500 px-4 py-3 rounded-md border border-gray-600 focus:ring-2 focus:ring-[#76ABAE] focus:outline-none transition-all"
+                required
+              />
+              <button type="submit" className="bg-[#76ABAE] hover:bg-teal-500 p-3 rounded-md transition-colors">
+                <ArrowRight size={24} />
+              </button>
+            </form>
           </div>
+        </div>
 
-          {/* Services */}
+        {/* Bottom Section: Links */}
+        <div className="grid md:grid-cols-4 gap-8">
+          <div>
+             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
+             <ul className="space-y-3">
+               {quickLinks.map((link) => (
+                 <li key={link.id}>
+                   <button
+                     onClick={() => setCurrentPage(link.id)}
+                     className="text-gray-400 hover:text-white transition-colors cursor-pointer group"
+                   >
+                     {link.label}
+                     <span className="opacity-0 group-hover:opacity-100 group-hover:ml-2 transition-all duration-300">→</span>
+                   </button>
+                 </li>
+               ))}
+             </ul>
+          </div>
+          
           <div>
             <h4 className="text-lg font-semibold mb-4">Our Services</h4>
-            <ul className="space-y-2 text-[#EEEEEE]/70">
-              <li>Auto Blog Generator</li>
-              <li>Resume Builder</li>
-              <li>Language Translator</li>
-              <li>Image Generator</li>
+            <ul className="space-y-3 text-gray-400">
+              {servicesLinks.map((service) => <li key={service}>{service}</li>)}
             </ul>
           </div>
 
-          {/* Contact Info */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
-            <div className="space-y-3">
-              <div className="flex items-center space-x-2">
-                <Phone size={16} />
-                <span className="text-[#EEEEEE]/70">{COMPANY_INFO.phone}</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Mail size={16} />
-                <span className="text-[#EEEEEE]/70">{COMPANY_INFO.email}</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <MapPin size={16} />
-                <span className="text-[#EEEEEE]/70">{COMPANY_INFO.address}</span>
+            <h4 className="text-lg font-semibold mb-4">Get in Touch</h4>
+            <div className="space-y-4 text-gray-400">
+              <a href={`tel:${COMPANY_INFO.phone}`} className="flex items-center space-x-3 hover:text-white">
+                <Phone size={18} />
+                <span>{COMPANY_INFO.phone}</span>
+              </a>
+              <a href={`mailto:${COMPANY_INFO.email}`} className="flex items-center space-x-3 hover:text-white">
+                <Mail size={18} />
+                <span>{COMPANY_INFO.email}</span>
+              </a>
+              <div className="flex items-start space-x-3">
+                <MapPin size={18} className="mt-1 flex-shrink-0" />
+                <span>{COMPANY_INFO.address}</span>
               </div>
             </div>
           </div>
         </div>
-
-        <div className="border-t border-[#31363F] mt-8 pt-8 text-center">
-          <p className="text-[#EEEEEE]/70">
-            © 2025 {COMPANY_INFO.name}. All rights reserved. | Designed & Developed by Techiguru.in
-          </p>
+      </div>
+      
+      {/* Copyright Bar */}
+      <div className="bg-black bg-opacity-20 mt-8 py-4">
+        <div className="container mx-auto px-4 flex flex-col sm:flex-row justify-between items-center text-sm text-gray-500 gap-2">
+           <p>© {new Date().getFullYear()} {COMPANY_INFO.name}. All Rights Reserved.</p>
+           <p>Designed & Developed by Techiguru.in</p>
         </div>
       </div>
     </footer>
   );
 };
 
-export default Footer;
+export default PerfectFooter;
