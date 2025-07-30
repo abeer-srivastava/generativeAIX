@@ -1,13 +1,6 @@
 import React from 'react';
-<<<<<<< Updated upstream
-import { Phone, Mail, MapPin, Clock } from 'lucide-react';
-import Card from '../ui/Card';
-import { teamMembers } from '../../data/team';
-import { COMPANY_INFO } from '../../utils/constants';
-=======
 // Adding more icons for a richer UI
 import { Phone, Mail, MapPin, Linkedin, Twitter, ArrowRight } from 'lucide-react';
->>>>>>> Stashed changes
 
 // --- Data for the component ---
 // It's better to manage data in arrays for easier updates.
@@ -40,49 +33,9 @@ const ContactInfo = () => {
   return (
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
-<<<<<<< Updated upstream
-        <div className="grid lg:grid-cols-3 gap-8">
-          {/* Contact Cards */}
-          <div className="lg:col-span-2">
-            <h2 className="text-3xl font-bold text-[#222831] mb-8">Get In Touch</h2>
-            <div className="grid md:grid-cols-2 gap-6 mb-8">
-              {/* Contact Methods */}
-              <Card className="text-center">
-                <Phone className="w-12 h-12 text-[#76ABAE] mx-auto mb-4" />
-                <h3 className="text-lg font-semibold mb-2">Call Us</h3>
-                <p className="text-[#31363F]">{COMPANY_INFO.phone}</p>
-                <p className="text-sm text-[#31363F]/70 mt-1">Mon-Fri 9AM-6PM</p>
-              </Card>
-              
-              <Card className="text-center">
-                <Mail className="w-12 h-12 text-[#76ABAE] mx-auto mb-4" />
-                <h3 className="text-lg font-semibold mb-2">Email Us</h3>
-                <p className="text-[#31363F]">{COMPANY_INFO.email}</p>
-                <p className="text-sm text-[#31363F]/70 mt-1">We'll respond within 24hrs</p>
-              </Card>
-              
-              <Card className="text-center">
-                <MapPin className="w-12 h-12 text-[#76ABAE] mx-auto mb-4" />
-                <h3 className="text-lg font-semibold mb-2">Visit Us</h3>
-                <p className="text-[#31363F]">{COMPANY_INFO.address}</p>
-                <p className="text-sm text-[#31363F]/70 mt-1">Schedule an appointment</p>
-              </Card>
-              
-              <Card className="text-center">
-                <Clock className="w-12 h-12 text-[#76ABAE] mx-auto mb-4" />
-                <h3 className="text-lg font-semibold mb-2">Business Hours</h3>
-                <p className="text-[#31363F]">Mon-Fri: 9AM-6PM</p>
-                <p className="text-sm text-[#31363F]/70 mt-1">Sat: 10AM-4PM</p>
-              </Card>
-            </div>
-          </div>
-          
-          {/* Team Contact */}
-=======
         <div className="grid lg:grid-cols-2 gap-12 items-start">
 
           {/* Left Column: Get In Touch */}
->>>>>>> Stashed changes
           <div>
             <span className="text-[#76ABAE] font-semibold">CONTACT US</span>
             <h2 className="text-3xl md:text-4xl font-bold my-4 text-[#222831]">

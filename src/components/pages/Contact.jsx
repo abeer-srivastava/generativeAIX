@@ -1,19 +1,4 @@
 import React, { useState } from 'react';
-<<<<<<< Updated upstream
-import ContactInfo from '../sections/ContactInfo';
-import Card from '../ui/Card';
-import Button from '../ui/Button';
-import { 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Send,
-  MessageSquare,
-  Clock,
-  Globe
-} from 'lucide-react';
-import { COMPANY_INFO } from '../../utils/constants';
-=======
 // Added more icons for the new sections
 import { Phone, Mail, MapPin, Send, Linkedin, Twitter, Calendar, QrCode } from 'lucide-react';
 
@@ -22,7 +7,6 @@ const SOCIAL_LINKS = {
     linkedin: '#',
     twitter: '#'
 };
->>>>>>> Stashed changes
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -49,46 +33,6 @@ const Contact = () => {
     setFormData({ name: '', email: '', service: '', message: '' });
   };
 
-<<<<<<< Updated upstream
-  const contactMethods = [
-    {
-      icon: Phone,
-      title: "Call Us",
-      description: "Speak directly with our AI experts",
-      contact: COMPANY_INFO.phone,
-      action: "Call Now"
-    },
-    {
-      icon: Mail,
-      title: "Email Us", 
-      description: "Send us your detailed requirements",
-      contact: COMPANY_INFO.email,
-      action: "Send Email"
-    },
-    {
-      icon: MessageSquare,
-      title: "Live Chat",
-      description: "Chat with our support team",
-      contact: "Available 24/7",
-      action: "Start Chat"
-    },
-    {
-      icon: MapPin,
-      title: "Visit Us",
-      description: "Meet us at our office",
-      contact: COMPANY_INFO.address,
-      action: "Get Directions"
-    }
-  ];
-
-  const officeHours = [
-    { day: "Monday - Friday", hours: "9:00 AM - 6:00 PM" },
-    { day: "Saturday", hours: "10:00 AM - 4:00 PM" },
-    { day: "Sunday", hours: "Closed" }
-  ];
-
-=======
->>>>>>> Stashed changes
   return (
     <div className="bg-gray-50">
       {/* Hero Section */}
@@ -153,63 +97,7 @@ const Contact = () => {
                     </button>
                   </div>
                 </form>
-<<<<<<< Updated upstream
-              </Card>
-            </div>
-
-            {/* Contact Info Sidebar */}
-            <div className="space-y-6">
-              {/* Office Hours */}
-              <Card>
-                <div className="flex items-center mb-4">
-                  <Clock className="text-[#76ABAE] mr-3" size={24} />
-                  <h3 className="text-xl font-semibold text-[#222831]">Office Hours</h3>
-                </div>
-                <div className="space-y-2">
-                  {officeHours.map((schedule, index) => (
-                    <div key={index} className="flex justify-between text-sm">
-                      <span className="text-[#31363F]">{schedule.day}</span>
-                      <span className="text-[#222831] font-medium">{schedule.hours}</span>
-                    </div>
-                  ))}
-                </div>
-              </Card>
-
-              {/* Quick Contact */}
-              <Card>
-                <div className="flex items-center mb-4">
-                  <Globe className="text-[#76ABAE] mr-3" size={24} />
-                  <h3 className="text-xl font-semibold text-[#222831]">Quick Contact</h3>
-                </div>
-                <div className="space-y-3">
-                  <div className="flex items-center text-sm">
-                    <Phone className="text-[#31363F] mr-2" size={16} />
-                    <span className="text-[#31363F]">{COMPANY_INFO.phone}</span>
-                  </div>
-                  <div className="flex items-center text-sm">
-                    <Mail className="text-[#31363F] mr-2" size={16} />
-                    <span className="text-[#31363F]">{COMPANY_INFO.email}</span>
-                  </div>
-                  <div className="flex items-center text-sm">
-                    <MapPin className="text-[#31363F] mr-2" size={16} />
-                    <span className="text-[#31363F]">{COMPANY_INFO.address}</span>
-                  </div>
-                </div>
-              </Card>
-
-              {/* Emergency Contact */}
-              <Card className="bg-red-50 border-red-200">
-                <h3 className="text-lg font-semibold text-red-800 mb-2">Emergency Support</h3>
-                <p className="text-red-600 text-sm mb-3">
-                  For critical issues with existing AI systems
-                </p>
-                <Button variant="outline" size="sm" className="w-full border-red-300 text-red-600 hover:bg-red-600 hover:text-white">
-                  Call Emergency Line
-                </Button>
-              </Card>
-=======
               </div>
->>>>>>> Stashed changes
             </div>
           </div>
         </div>
