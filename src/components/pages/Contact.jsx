@@ -139,7 +139,7 @@ const Contact = () => {
                 <p className="text-gray-600 mt-2 mb-4">Scan with your phone to add us to your contacts.</p>
                 <div className="p-2 border rounded-lg bg-white">
                     {/* Replace with your actual vCard QR Code Image */}
-                    <img src="/images/contact-qrcode.png" alt="vCard QR Code" className="w-32 h-32" />
+                    <img src="/images/icons/QR_CONTACT.jpg" alt="vCard QR Code" className="w-32 h-32" />
                 </div>
             </div>
           </div>
