@@ -4,8 +4,7 @@ import Card from '../ui/Card';
 import Button from '../ui/Button';
 import { ArrowRight, CheckCircle } from 'lucide-react';
 
-
-const Services = () => {
+const Services = ({ setCurrentPage}) => {
   const serviceFeatures = [
     "24/7 Customer Support",
     "Scalable Solutions",
@@ -54,7 +53,7 @@ const Services = () => {
               Comprehensive artificial intelligence solutions designed to transform your business 
               operations, enhance productivity, and drive innovation across all industries.
             </p>
-            <Button size="lg" className="mb-6 lg:mb-8">
+            <Button size="lg" className="mb-6 lg:mb-8 cursor-pointer">
               Get Started Today
               <ArrowRight className="ml-2" size={20} />
             </Button>
@@ -119,7 +118,7 @@ const Services = () => {
           
           <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-8">
             {processSteps.map((step, index) => (
-              <Card key={index} className="p-4 sm:p-6 text-center">
+              <Card key={index} className="p-4 sm:p-6 text-center cursor-pointer">
                 <div className="w-12 h-12 sm:w-16 sm:h-16 bg-[#76ABAE] text-[#EEEEEE] rounded-full flex items-center justify-center mx-auto mb-4 text-sm sm:text-lg font-bold">
                   {step.step}
                 </div>
@@ -139,10 +138,8 @@ const Services = () => {
             Let's discuss how our AI solutions can drive your business forward
           </p>
           <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center">
-            <Button variant="ghost" size="lg" className="bg-[#EEEEEE] text-[#76ABAE] hover:bg-[#EEEEEE]/90">
-              Schedule Consultation
-            </Button>
-            <Button variant="outline" size="lg" className="border-[#EEEEEE] text-[#EEEEEE] hover:bg-[#EEEEEE] hover:text-[#76ABAE]">
+            <Button onClick={() => setCurrentPage('portfolio')}
+            variant="outline" size="lg" className="px-4 py-2 bg-blue-500 rounded-lg cursor-pointer border-[#EEEEEE] text-[#EEEEEE] hover:bg-[#EEEEEE] hover:text-[#76ABAE]">
               View Portfolio
             </Button>
           </div>
@@ -151,5 +148,4 @@ const Services = () => {
     </div>
   );
 };
-
 export default Services;

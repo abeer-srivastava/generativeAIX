@@ -1,12 +1,9 @@
 import React, { useState } from 'react';
+import { COMPANY_INFO, SOCIAL_LINKS } from '../../utils/constants';
 // Added more icons for the new sections
-import { Phone, Mail, MapPin, Send, Linkedin, Twitter, Calendar, QrCode } from 'lucide-react';
+import { Phone, Mail, MapPin, Send, Linkedin, Calendar, QrCode, X } from 'lucide-react';
 
 // You would get this from your social media profiles
-const SOCIAL_LINKS = {
-    linkedin: '#',
-    twitter: '#'
-};
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -128,7 +125,7 @@ const Contact = () => {
               <p className="text-gray-600 mt-2 mb-6">Follow us on social media for the latest AI news and company updates.</p>
               <div className="flex justify-center lg:justify-start space-x-4">
                   <a href={SOCIAL_LINKS.twitter} target="_blank" rel="noopener noreferrer" className="bg-gray-100 p-4 rounded-full text-gray-600 hover:bg-[#76ABAE] hover:text-white transition-colors duration-300">
-                      <Twitter size={24} />
+                      <X size={24} />
                   </a>
                   <a href={SOCIAL_LINKS.linkedin} target="_blank" rel="noopener noreferrer" className="bg-gray-100 p-4 rounded-full text-gray-600 hover:bg-[#76ABAE] hover:text-white transition-colors duration-300">
                       <Linkedin size={24} />

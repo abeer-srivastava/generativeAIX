@@ -61,7 +61,7 @@ const AboutSection = () => (
           <h2 className="text-3xl md:text-4xl font-bold my-4 text-[#222831]">Pioneering the Future of AI Solutions</h2>
           <p className="text-gray-600 mb-4">We are a leading technology company specializing in artificial intelligence and the power of generative AI. Our solutions are designed to transform your business operations, from automated chatbots to intelligent data scraping.</p>
           <p className="text-gray-600 mb-6">Our mission is to make AI accessible and scalable for everyone, ensuring sustainability and growth at an affordable price point.</p>
-          <button className="bg-[#76ABAE] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#31363F] transition duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1">Learn More</button>
+          <button className="bg-[#76ABAE] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#31363F] transition duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1 cursor-pointer">Learn More</button>
         </div>
       </div>
     </div>
@@ -76,7 +76,7 @@ const ServicesSection = () => (
       <p className="text-gray-600 mb-12 max-w-2xl mx-auto">Explore a suite of AI-driven tools designed to enhance productivity and supercharge your operations.</p>
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
         {servicesData.map(service => (
-          <div key={service.title} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 text-left">
+          <div key={service.title} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 text-left cursor-pointer">
             <div className="bg-[#76ABAE]/10 text-[#76ABAE] w-16 h-16 rounded-lg flex items-center justify-center mb-6">{service.icon}</div>
             <h3 className="text-xl font-bold text-gray-800 mb-2">{service.title}</h3>
             <p className="text-gray-500">{service.desc}</p>
@@ -100,7 +100,7 @@ const FaqSection = () => {
             <div className="space-y-4 mt-8">
               {faqData.map((faq, index) => (
                 <div key={index} className="border-b border-gray-200 pb-4">
-                  <button onClick={() => setOpenIndex(openIndex === index ? null : index)} className="w-full flex justify-between items-center text-left font-semibold text-lg text-gray-800 hover:text-[#76ABAE] transition">
+                  <button onClick={() => setOpenIndex(openIndex === index ? null : index)} className="w-full flex justify-between items-center text-left font-semibold text-lg text-gray-800 hover:text-[#76ABAE] transition cursor-pointer">
                     <span>{faq.q}</span>
                     <ChevronDown className={`transform transition-transform duration-300 ${openIndex === index ? 'rotate-180' : ''}`} />
                   </button>
@@ -126,8 +126,8 @@ const CtaSection = () => (
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Transform Your Business?</h2>
             <p className="text-white/80 mb-8 max-w-2xl mx-auto">Join thousands of businesses already using our AI-powered solutions to automate processes, generate content, and accelerate growth.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-[#76ABAE] px-8 py-3 rounded-lg font-semibold hover:bg-gray-200 transition duration-300 transform hover:scale-105">Get Started Free</button>
-                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-[#76ABAE] transition duration-300 transform hover:scale-105">Schedule a Demo</button>
+                <button className="bg-white text-[#76ABAE] px-8 py-3 rounded-lg font-semibold hover:bg-gray-200 transition duration-300 transform hover:scale-105 cursor-pointer">Get Started Free</button>
+                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-[#76ABAE] transition duration-300 transform hover:scale-105 cursor-pointer">Schedule a Demo</button>
             </div>
         </div>
     </section>

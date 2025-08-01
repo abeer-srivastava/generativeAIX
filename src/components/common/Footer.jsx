@@ -35,7 +35,7 @@ const PerfectFooter = ({ setCurrentPage }) => {
           <div>
             <div className="flex items-center space-x-3 mb-4">
               <div className="w-10 h-10 bg-gradient-to-r from-[#76ABAE] to-[#31363F] rounded-lg flex items-center justify-center">
-                 <span className="text-white font-bold">GA</span>
+                 <span className="text-white font-bold cursor-pointer">GA</span>
               </div>
               <h3 className="text-2xl font-bold">{COMPANY_INFO.name}</h3>
             </div>
@@ -90,7 +90,7 @@ const PerfectFooter = ({ setCurrentPage }) => {
                 className="w-full bg-gray-700/50 text-white placeholder-gray-500 px-4 py-3 rounded-md border border-gray-600 focus:ring-2 focus:ring-[#76ABAE] focus:outline-none transition-all"
                 required
               />
-              <button type="submit" className="bg-[#76ABAE] hover:bg-teal-500 p-3 rounded-md transition-colors">
+              <button type="submit" className="bg-[#76ABAE] hover:bg-teal-500 p-3 rounded-md transition-colors cursor-pointer">
                 <ArrowRight size={24} />
               </button>
             </form>

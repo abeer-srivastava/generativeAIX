@@ -62,18 +62,20 @@ const Hero = () => {
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#222831] mb-6 leading-tight">
               Transform Your Business with 
             </h1>
+            <h1 className="text-4x1 sm:text-5xl lg:text-6xl font-extrabold text-[#222831] mb-6 leading-tight">
             <AnimatedWords words={animatedWords} />
+            </h1>
 
             <p className="text-lg text-gray-600 mb-8 max-w-lg mx-auto lg:mx-0">
               We create cutting-edge AI solutions that revolutionize how businesses operate, innovate, and connect with their customers.
             </p>
             
             <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4 justify-center lg:justify-start">
-              <button className="bg-[#76ABAE] text-white font-semibold py-3 px-6 rounded-lg hover:bg-[#31363F] transition duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+              <button className="bg-[#76ABAE] text-white font-semibold py-3 px-6 rounded-lg cursor-pointer hover:bg-[#31363F] transition duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
                 Get Started
                 <ArrowRight className="inline ml-2" size={20} />
               </button>
-              <button className="bg-transparent border-2 border-gray-300 text-gray-700 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors">
+              <button className="bg-transparent border-2 border-gray-300 text-gray-700 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors cursor-pointer">
                 View Our Work
               </button>
             </div>
@@ -88,7 +90,7 @@ const Hero = () => {
             
 
             {/* "Our Experts" Floating Card */}
-            <div className="relative bg-black/40 backdrop-blur-lg rounded-2xl p-8 text-white border border-white/20 shadow-xl max-w-sm w-full">
+            <div className="relative bg-black/40 backdrop-blur-lg rounded-2xl p-8 text-white border border-white/20 shadow-xl max-w-sm w-full cursor-pointer">
               <h3 className="text-xl font-bold mb-4">Our AI Experts</h3>
               <div className="space-y-4">
                 {experts.map(expert => (

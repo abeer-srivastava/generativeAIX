@@ -49,7 +49,7 @@ const timelineData = [
 // --- Sub-Components for a cleaner structure ---
 
 const TeamCard = ({ member }) => (
-  <div className="bg-white rounded-xl shadow-lg p-6 text-center group transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+  <div className="bg-white rounded-xl shadow-lg p-6 text-center group transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 cursor-pointer">
     <div className="relative w-40 h-40 mx-auto">
       <img
         src={member.image || ''}
