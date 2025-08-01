@@ -104,7 +104,7 @@ const Contact = () => {
       </section>
       
       {/* --- NEW: Schedule a Meeting Section --- */}
-      <section className="py-20 bg-gray-50">
+      <section className="bg-gray-50">
         <div className="container mx-auto px-4 text-center">
           <Calendar size={48} className="mx-auto text-[#76ABAE] mb-4" />
           <h2 className="text-3xl md:text-4xl font-bold text-[#222831]">Schedule a Meeting</h2>

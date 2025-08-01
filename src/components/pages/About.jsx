@@ -1,6 +1,6 @@
 import React from 'react';
 // Import necessary icons from lucide-react
-import { User, Linkedin, Twitter, Rocket, Users, Handshake, Briefcase, Building2 } from 'lucide-react';
+import { User, Linkedin, Twitter, Rocket, Users, Handshake, Briefcase, Building2,X } from 'lucide-react';
 
 // --- DATA: Easily update team & timeline here ---
 
@@ -15,20 +15,20 @@ const teamMembers = [
   {
     name: "Ansh Agnihotri",
     role: "Co-Founder & Backend Engineer",
-    image: "/images/team/Ansh_Agnihotri.jpg", // Example path
-    socials: { linkedin: '#', twitter: '#' }
+    image: "/images/team/AnshAgnihotri.jpeg", // Example path
+    socials: { linkedin: 'https://www.linkedin.com/in/ansh-agnihotri01', twitter: 'https://x.com/AnshAgni01?t=orEFfbL96kNgZUeRx07JWA&s=08' }
   },
   {
     name: "Aman Tiwari",
     role: "Co-Founder & AI Lead",
     image: "/images/team/Aman_Tiwari.jpg", // Example path
-    socials: { linkedin: '#', twitter: '#' }
+    socials: { linkedin: 'https://www.linkedin.com/in/aman-tiwari-50821620a', twitter: 'https://x.com/AmanTiwari__0?t=n1CDazCNeF2VZa3crmHZzw&s=09' }
   },
   {
     name: "Aman Pandey",
     role: "Co-Founder & UI/UX Designer",
     image: "/images/team/Aman_Pandey.jpg", // Example path
-    socials: { linkedin: '#', twitter: '#' }
+    socials: { linkedin: 'https://www.linkedin.com/in/aman-pandey-aa6020253', twitter: ' https://x.com/03Aman_073?t=NPSEt9fJiXmDEldKvn2-wg&s=08' }
   }
 ];
 
@@ -59,7 +59,7 @@ const TeamCard = ({ member }) => (
       {/* Social Icons on Hover */}
       <div className="absolute inset-0 bg-black/60 rounded-full flex items-center justify-center space-x-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
         <a href={member.socials.linkedin} target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#76ABAE]"><Linkedin size={24} /></a>
-        <a href={member.socials.twitter} target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#76ABAE]"><Twitter size={24} /></a>
+        <a href={member.socials.twitter} target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#76ABAE]"><X size={20} /></a>
       </div>
     </div>
     <h3 className="font-bold text-xl text-gray-800 mt-4 mb-1">{member.name}</h3>

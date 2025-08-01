@@ -18,6 +18,14 @@ const PerfectFooter = ({ setCurrentPage }) => {
     'Image Generator'
   ];
 
+  // Function to scroll to the top of the page
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth' // for smooth scrolling
+    });
+  };
+
   return (
     <footer className="bg-[#222831] text-white">
       <div className="container mx-auto px-4 pt-16 pb-8">
@@ -96,8 +104,11 @@ const PerfectFooter = ({ setCurrentPage }) => {
              <ul className="space-y-3">
                {quickLinks.map((link) => (
                  <li key={link.id}>
-                   <button
-                     onClick={() => setCurrentPage(link.id)}
+                   <button 
+                     onClick={() => {
+                       scrollToTop();
+                       setCurrentPage(link.id);
+                     }}
                      className="text-gray-400 hover:text-white transition-colors cursor-pointer group"
                    >
                      {link.label}

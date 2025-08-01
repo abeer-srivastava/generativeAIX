@@ -43,7 +43,7 @@ const FinalHeader = ({ currentPage, setCurrentPage }) => {
             {/* Logo */}
             <button onClick={() => handleNavClick('home')} className="flex items-center space-x-2">
               <img src="/images/icons/finalLogo-removebg-preview.png" alt="Generative Aix Logo"
-              className="h-auto max-h-36 -my-12 w-auto object-contain rounded-lg" />
+              className="h-auto max-h-36 -my-12 w-auto object-contain rounded-lg cursor-pointer" />
               <span className="text-xl font-bold text-gray-800 hidden sm:inline">{COMPANY_INFO.name}</span>
             </button>
 
@@ -53,7 +53,7 @@ const FinalHeader = ({ currentPage, setCurrentPage }) => {
                 <button
                   key={item.id}
                   onClick={() => handleNavClick(item.id)}
-                  className={`px-4 py-2 rounded-md font-medium transition-colors duration-300 ${
+                  className={`px-4 py-2 rounded-md font-medium transition-colors duration-300 cursor-pointer ${
                     currentPage === item.id
                       ? 'bg-teal-100 text-[#76ABAE]'
                       : 'text-gray-600 hover:bg-gray-100'
@@ -64,7 +64,7 @@ const FinalHeader = ({ currentPage, setCurrentPage }) => {
               ))}
               <button
                 onClick={() => handleNavClick(contactItem.id)}
-                className="bg-[#76ABAE] text-white font-semibold py-2 px-5 rounded-lg hover:bg-teal-600 transition-colors shadow-sm ml-4"
+                className="bg-[#76ABAE] text-white font-semibold py-2 px-5 rounded-lg hover:bg-teal-600 transition-colors shadow-sm ml-4 cursor-pointer"
               >
                 {contactItem.label}
               </button>
