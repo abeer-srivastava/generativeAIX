@@ -37,21 +37,7 @@ const AnimatedWords = ({ words }) => {
   }, [subIndex, index, isDeleting, words]);
 
   return (
-    <span
-      className="
-        text-[#76ABAE]
-        block
-        text-3xl
-        sm:inline
-        sm:text-5xl
-        lg:text-6xl
-        font-extrabold
-        mb-6
-        leading-tight
-        transition-all
-        duration-200
-      "
-    >
+    <span className="text-[#76ABAE] block sm:inline">
       {`${words[index].substring(0, subIndex)}`}
       <span className="animate-ping">|</span>
     </span>
@@ -77,7 +63,7 @@ const Hero = () => {
               Transform Your Business with 
             </h1>
             <AnimatedWords words={animatedWords} />
-            
+
             <p className="text-lg text-gray-600 mb-8 max-w-lg mx-auto lg:mx-0">
               We create cutting-edge AI solutions that revolutionize how businesses operate, innovate, and connect with their customers.
             </p>
